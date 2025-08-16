@@ -1,0 +1,9 @@
+.category-card {
+  background-color: var(--light-pink);
+  transition: all 0.3s ease;
+  &:hover {
+    background-color: var(--primary-color);
+    color: #fff;
+    cursor: pointer;
+  }
+}

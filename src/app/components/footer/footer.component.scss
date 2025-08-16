@@ -1,0 +1,104 @@
+.discount-section {
+  padding: 80px 0;
+  background-image: url('../../../assets/images/footer.png');
+  background-position: center;
+  text-align: center;
+}
+
+.content-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.nav-links {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin-bottom: 50px;
+}
+
+.nav-links a {
+  color: #000;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #F82BA9;
+}
+
+.coupon-box {
+  border-radius: 20px;
+  padding: 50px;
+  max-width: 700px;
+  margin: 0 auto;
+  color: #333;
+}
+
+.coupon-title {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.coupon-title .highlight {
+  color: #F82BA9;
+}
+
+.coupon-subtitle {
+  font-size: 16px;
+  color: #666;
+  margin-bottom: 30px;
+}
+
+.form-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+
+.form-wrapper input {
+  padding: 15px 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 300px;
+  font-size: 16px;
+}
+.form-wrapper input {
+  padding: 16px; /* المقاس الذي أرسلته */
+  border: 1px solid #ccc;
+  border-radius: 30px; /* المقاس الذي أرسلته */
+  width: 400px; /* المقاس الذي أرسلته */
+  height: 49px; /* المقاس الذي أرسلته */
+  font-size: 16px;
+  box-sizing: border-box; /* لضمان أن البادينج لا يغير الحجم الكلي */
+}
+
+.subscribe-btn {
+  background-color: #F82BA9;
+  color: #fff;
+  border: none;
+  border-radius: 30px; /* مقاس دائري ليتناسب مع شكل الـ input */
+  padding: 15px 30px;
+  font-size: 16px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transition: background-color 0.3s ease;
+  height: 49px; /* ليكون نفس ارتفاع الـ input */
+}
+
+.subscribe-btn:hover {
+  background-color: #d14152;
+}
+
+.form-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px; /* المقاس الذي أرسلته */
+}

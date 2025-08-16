@@ -1,0 +1,54 @@
+<!-- Main section wrapper for the products component -->
+<section class="products-section">
+  <div class="container">
+    <div class="title">
+      <!-- Title of the section -->
+      <p>Popular Items</p>
+    </div>
+
+    <!-- Container for all product cards -->
+    <div class="cards">
+      <!-- Looping through the products array to create a card for each product -->
+      <div class="product-card" *ngFor="let product of products">
+        <!-- Image container with a hover effect -->
+        <div class="image-container">
+          <img [src]="product.image" alt="product-image" class="product-image">
+          <div class="image-hover">
+            <p>{{product.rating.count}} reviews</p>
+          </div>
+        </div>
+
+        <!-- Container for product name and price, using flexbox for layout -->
+        <div class="product-details">
+          <h3 class="product-name">
+            {{product.title}}
+          </h3>
+          <p class="product-price">
+            {{"$"+product.price}}
+          </p>
+        </div>
+
+        <!-- Container for the rating stars and the buy button, using flexbox -->
+        <div class="rating-and-buy">
+          <!-- Rating stars -->
+          <div class="rating">
+            <span class="d-inline" *ngFor="let item of [1,2,3,4,5]">
+              <!-- Solid star for full rating -->
+              <i class="fa-solid fa-star rate-icon" *ngIf="product.rating.rate >= item"></i>
+              <!-- Half star for partial rating -->
+              <i class="fa-solid fa-star-half-stroke rate-icon"
+                *ngIf="product.rating.rate < item && ((1-(item-product.rating.rate)>=0.5)&&(1-(item-product.rating.rate)<1))"></i>
+              <!-- Empty star for no rating -->
+              <i class="fa-regular fa-star rate-icon"
+                *ngIf="product.rating.rate < item && ((1-(item-product.rating.rate)<.5)||(item-product.rating.rate>1))"></i>
+            </span>
+          </div>
+          <!-- Buy button -->
+          <button class="icon-btn">
+            <i class="fa fa-shopping-bag"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

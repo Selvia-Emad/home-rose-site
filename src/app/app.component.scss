@@ -1,0 +1,53 @@
+:root {
+  --primary-color: #F82BA9;
+  --secondary-color: #fce4ec;
+  --text-color: #333;
+  --light-pink: #fff5f8;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+.header .nav-link {
+  color: var(--text-color);
+  margin: 0 10px;
+  font-weight: 500;
+  &:hover {
+    color: var(--primary-color);
+  }
+}
+
+.hero {
+  background: linear-gradient(to right, #fff5f8, #ffeef3);
+  h1 span {
+    color: var(--primary-color);
+  }
+  .btn-primary {
+    background-color: var(--primary-color);
+    border: none;
+  }
+}
+
+.category-card {
+  background-color: var(--light-pink);
+  transition: all 0.3s ease;
+  border: 1px solid #f8d7da;
+  &:hover {
+    background-color: var(--primary-color);
+    color: #fff;
+    cursor: pointer;
+    img {
+      filter: brightness(0) invert(1);
+    }
+  }
+}
+
+.product-card {
+  border: 1px solid #eee;
+  transition: all 0.3s ease;
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+  }
+}

@@ -1,0 +1,55 @@
+.top-categories-bar {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 20px;
+  padding: 20px ;
+  margin-top: 2rem;
+  background-color: #FEEDF7; /* لون الخلفية الوردي الفاتح */
+
+}
+
+// .category-item-container {
+//   flex: 1;
+//   background-color: #FEEDF7; /* لون الخلفية الوردي الفاتح */
+//   border-radius: 10px;
+//   padding: 15px;
+// }
+
+.category-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.icon-circle {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color:  #F82BA9; /* لون الدائرة الفوشيا */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.icon-circle svg {
+  width: 30px;
+  height: 30px;
+  fill: #fff; /* لون الأيقونات يكون أبيض */
+}
+
+.text-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.category-name {
+  font-size: 16px;
+  font-weight: 600;
+  color: #333;
+}
+
+.item-count {
+  font-size: 12px;
+  color: #666;
+}

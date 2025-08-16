@@ -1,0 +1,15 @@
+<div class="product-card">
+  <div class="product-image-container">
+    <img [src]="product.imageUrl" alt="{{ product.name }}" class="product-image">
+  </div>
+  <div class="product-info">
+    <h3 class="product-name">{{ product.name }}</h3>
+    <div class="rating">
+      <span class="star-filled" *ngFor="let star of filledStars">★</span>
+      <span class="star-empty" *ngFor="let star of emptyStars">☆</span>
+    </div>
+<div class="product-price">{{ product.price | currency:'USD':'symbol':'1.2-2' }}</div>
+  </div>
+  <button class="add-to-cart-btn">
+    </button>
+</div>

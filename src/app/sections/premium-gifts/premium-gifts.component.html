@@ -1,0 +1,10 @@
+<section class="premium-gifts-section">
+  <div class="section-header">
+    <h2 class="section-title">Premium Gifts</h2>
+    <p class="section-subtitle">Post Seller Gifts And Products</p>
+  </div>
+
+  <div class="products-grid">
+    <app-product-card *ngFor="let item of premiumProducts" [product]="item"></app-product-card>
+  </div>
+</section>

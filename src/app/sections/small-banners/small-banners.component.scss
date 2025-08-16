@@ -1,0 +1,158 @@
+/*
+  تنسيقات CSS لتصميم قسم البنرات الصغيرة.
+  تم تصميم التنسيقات لتكون متجاوبة (responsive) لتعمل بشكل جيد على جميع الأجهزة.
+*/
+
+/*
+  تنسيقات القسم الرئيسي للبنرات.
+  يستخدم display: flex لتنظيم البطاقات في صف واحد.
+  flex-wrap: wrap يسمح للبطاقات بالنزول إلى سطر جديد عند عدم وجود مساحة كافية.
+  gap يضيف مسافة بين البطاقات.
+*/
+.small-banners-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  box-sizing: border-box;
+}
+
+/*
+  تنسيقات كل بطاقة بنر.
+  flex: 1 1 300px يجعل كل بطاقة مرنة وتأخذ مساحة مناسبة.
+  display: flex يستخدم لتنظيم المحتوى والصورة داخل البطاقة.
+  align-items: center لمحاذاة العناصر عمودياً.
+  position: relative لوضع المحتوى فوق الصورة.
+  overflow: hidden لإخفاء أي جزء زائد من الصورة.
+*/
+.banner-card {
+  flex: 1 1 300px; /* مرن، ينكمش، وأساس 300px */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  min-height: 150px;
+}
+
+/* تأثير التكبير عند المرور بالماوس */
+.banner-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/*
+  تنسيقات الألوان الخلفية للبطاقات.
+  تستخدم تدرج لوني لإضفاء مظهر عصري.
+*/
+.light-blue-bg {
+  background: linear-gradient(135deg, #e0f7fa, #b2ebf2);
+}
+
+.light-pink-bg {
+  background: linear-gradient(135deg, #fce4ec, #f8bbd0);
+}
+
+.red-bg {
+  background: linear-gradient(135deg, #fbe9e7, #ffccbc);
+}
+
+/*
+  تنسيقات محتوى البنر (العنوان والنص).
+*/
+.banner-content {
+  z-index: 2; /* يضمن ظهور المحتوى فوق الصورة */
+}
+
+.banner-content h3 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+.banner-content p {
+  font-size: 0.9rem;
+  color: #555;
+  margin-bottom: 15px;
+}
+
+/*
+  تنسيقات زر "Shop Now".
+  يتم إعطاءه مظهر أنيق مع حدود وأيقونة سهم.
+*/
+.shop-now-btn {
+  background-color: transparent;
+  border: 1px solid #333;
+  color: #333;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+}
+
+/* تأثيرات الزر عند التفاعل */
+.shop-now-btn:hover {
+  background-color: #333;
+  color: #fff;
+  transform: scale(1.05);
+}
+
+.shop-now-btn .arrow {
+  transition: transform 0.3s ease;
+}
+
+.shop-now-btn:hover .arrow {
+  transform: translateX(5px);
+}
+
+/*
+  تنسيقات الصورة داخل البنر.
+  توضع في وضع مطلق (absolute) لتطفو فوق الخلفية.
+*/
+.banner-card img {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: auto;
+  height: 100%;
+  max-width: 50%; /* تضمن أن الصورة لا تأخذ مساحة كبيرة */
+  object-fit: contain;
+  z-index: 1; /* يوضع تحت المحتوى */
+}
+
+/*
+  استعلامات الوسائط (Media Queries) للتجاوب مع الشاشات الصغيرة.
+  يتم تقليل حجم الخط والصور لجعل التصميم مناسباً للجوال.
+*/
+@media (max-width: 768px) {
+  .banner-card {
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    min-height: 200px;
+    padding: 20px;
+  }
+
+  .banner-content {
+    margin-bottom: 10px;
+  }
+
+  .banner-card img {
+    position: relative;
+    max-width: 100%;
+    height: auto;
+    margin-top: 15px;
+  }
+}
