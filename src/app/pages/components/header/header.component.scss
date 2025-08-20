@@ -1,0 +1,294 @@
+/* Header Styles */
+.main-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 80px;
+  background-color: #fff;
+  height: 86px;
+  box-sizing: border-box;
+}
+
+/* Navigation Menu */
+// .main-nav {
+//   /* التنسيقات الأساسية للقائمة */
+// }
+
+.main-nav ul {
+  list-style: none;
+  display: flex;
+  gap: 24px;
+  width: auto;
+  height: auto;
+  margin: 0;
+  padding: 0;
+}
+
+.main-nav a {
+  text-decoration: none;
+  color: #160e4b;
+  font-weight: 500;
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  line-height: 28.8px;
+  letter-spacing: 0;
+  text-transform: capitalize;
+  vertical-align: middle;
+  transition: all 300ms ease-in-out;
+}
+
+/* تنسيق الرابط النشط */
+.main-nav a.active,
+.main-nav a:hover {
+  color: #f82ba9;
+}
+
+/* User Actions - Icons */
+.user-actions {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.user-actions a {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.user-actions .badge {
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  background-color: #f82ba9;
+  color: #fff;
+  font-size: 10px;
+  font-weight: bold;
+  border-radius: 50%;
+  width: 18px;
+  height: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+}
+
+/* Mobile Menu & Hamburger Icon */
+.hamburger-icon {
+  display: none; /* إخفاء الأيقونة في وضع سطح المكتب */
+  cursor: pointer;
+  color: #160e4b;
+  font-size: 24px;
+  margin-left: 20px; /* مسافة لليسار عن باقي الأيقونات */
+}
+
+/* Mobile Menu Overlay */
+.mobile-menu {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 99;
+}
+
+.mobile-nav {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 70%;
+  max-width: 300px;
+  height: 100%;
+  background-color: #fff;
+  padding: 20px;
+  transform: translateX(-100%);
+  transition: transform 0.3s ease-in-out;
+}
+
+.mobile-nav.open {
+  transform: translateX(0);
+}
+
+.mobile-nav ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 50px;
+}
+
+.mobile-nav ul li a {
+  display: block;
+  padding: 15px 0;
+  font-size: 18px;
+  color: #160e4b;
+  text-decoration: none;
+  border-bottom: 1px solid #eee;
+}
+
+.mobile-nav .close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  font-size: 24px;
+  color: #160e4b;
+}
+
+/* ---------------------------------------------------- */
+/* Responsive Design */
+/* ---------------------------------------------------- */
+@media (max-width: 768px) {
+  .main-header {
+    padding: 10px 20px; /* بادينج على الهاتف */
+  }
+
+  .main-nav {
+    display: none; /* إخفاء القائمة الرئيسية */
+  }
+
+  .user-actions {
+    display: none; /* إخفاء أيقونات المستخدم في الهاتف */
+  }
+
+  /* إظهار أيقونات البحث، الإعجابات، والعربة فقط في وضع الهاتف */
+  .mobile-actions {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .hamburger-icon {
+    display: block; /* إظهار أيقونة الهامبرغر */
+  }
+
+  .mobile-menu.active {
+    display: block;
+  }
+}
+
+
+// Import PrimeNG variables to override them if needed
+// @import "primeng/resources/themes/lara-light-blue/theme.css";
+// @import "primeng/resources/primeng.min.css";
+// @import "primeicons/primeicons.css";
+
+// /* General Styles */
+// :host {
+//   font-family: "Inter", sans-serif;
+// }
+
+// /* Header & Toolbar */
+// .main-header-toolbar {
+//   display: flex;
+//   justify-content: space-between;
+//   align-items: center;
+//   padding: 10px 80px !important;
+//   background-color: #fff !important;
+//   height: 86px !important;
+//   border: none !important;
+// }
+
+// .logo img {
+//   height: 38px;
+// }
+
+// /* Navigation Menu */
+// .main-nav ul {
+//   list-style: none;
+//   display: flex;
+//   gap: 24px;
+//   margin: 0;
+//   padding: 0;
+// }
+
+// .main-nav a {
+//   text-decoration: none;
+//   color: #160e4b;
+//   font-weight: 500;
+//   font-size: 16px;
+//   line-height: 28.8px;
+//   text-transform: capitalize;
+//   transition: all 300ms ease-in-out;
+// }
+
+// .main-nav a.active,
+// .main-nav a:hover {
+//   color: #f82ba9;
+// }
+
+// /* User Actions - Icons */
+// .user-actions {
+//   display: flex;
+//   align-items: center;
+//   gap: 20px;
+
+//   i {
+//     font-size: 20px;
+//     color: #f82ba9;
+//   }
+// }
+
+// .p-overlay-badge .p-badge {
+//   background-color: #f82ba9 !important;
+//   color: #fff !important;
+//   min-width: 18px !important;
+//   height: 18px !important;
+//   font-size: 10px !important;
+//   font-weight: bold !important;
+//   border-radius: 50% !important;
+//   top: -5px;
+//   right: -5px;
+// }
+
+// /* Mobile Sidebar */
+// .mobile-sidebar {
+//   width: 70% !important;
+//   max-width: 300px !important;
+//   background-color: #fff !important;
+//   padding: 20px !important;
+
+//   .p-sidebar-header {
+//     display: none !important; // Hide default header if not needed
+//   }
+// }
+
+// .mobile-menu-content {
+//   .mobile-nav ul {
+//     list-style: none;
+//     padding: 0;
+//     margin-top: 50px;
+//   }
+
+//   .mobile-nav a {
+//     display: block;
+//     padding: 15px 0;
+//     font-size: 18px;
+//     color: #160e4b;
+//     text-decoration: none;
+//     border-bottom: 1px solid #eee;
+//     transition: none;
+//   }
+// }
+
+// /* Hide hamburger menu on desktop */
+// .mobile-menu-button {
+//   display: none !important;
+// }
+
+// /* Responsive Styles */
+// @media (max-width: 768px) {
+//   .main-header-toolbar {
+//     padding: 10px 20px !important;
+//   }
+
+//   .desktop-nav-container,
+//   .user-actions.desktop-view {
+//     display: none !important;
+//   }
+
+//   .mobile-menu-button {
+//     display: block !important;
+//   }
+// }

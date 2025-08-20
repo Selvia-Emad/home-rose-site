@@ -1,0 +1,13 @@
+<section class="categories py-4">
+  <div class="container">
+    <div class="row g-3">
+      <div class="col-6 col-md-4 col-lg-2" *ngFor="let category of categories">
+        <div class="category-card text-center p-3 rounded">
+          <img [src]="category.icon" alt="{{category.name}}" width="50" class="mb-2">
+          <h6>{{category.name}}</h6>
+          <p class="small text-muted">{{category.items}} Items</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

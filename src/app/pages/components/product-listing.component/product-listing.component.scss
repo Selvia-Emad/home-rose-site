@@ -1,0 +1,473 @@
+.products-section {
+  display: grid;
+  grid-template-columns: 1fr 5fr;
+  gap: 30px;
+  margin-top: 50px;
+  align-items: center;
+}
+
+/* Product Card Styles */
+.product-card {
+  // flex-shrink: 0; // يمنع انكماش البطاقات
+  min-width: 302px;
+
+  background-color: #ffffff;
+  border-radius: 16px;
+  padding: 16px;
+  text-align: center;
+  position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease ;
+
+}
+
+.products-header {
+  // التنسيقات الخاصة بالهيدر
+}
+
+.subtitle {
+  font-size: 14px;
+  font-weight: 600;
+  color: #F82BA9;
+}
+
+.title {
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 1.2;
+  margin: 10px 0;
+}
+
+.description {
+  font-size: 16px;
+  color: #666;
+}
+
+.explore-btn {
+  background-color: #F82BA9;
+  color: #fff;
+  border: none;
+  padding: 12px 30px;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+.products-list-container {
+  position: relative;
+  overflow: hidden; // إخفاء المنتجات الزائدة
+  // padding: 0 50px; // إضافة padding لإظهار الأسهم على جانب المنتجات
+}
+
+.products-list {
+  display: flex;
+  gap: 24px; // زيادة المسافة بين المنتجات لتكون متوافقة مع الصورة
+  scroll-behavior: smooth;
+  padding-bottom: 20px;
+  overflow-x: auto; // السماح بالتمرير البرمجي فقط
+}
+
+/* إخفاء شريط التمرير */
+.products-list::-webkit-scrollbar {
+  display: none;
+}
+
+.products-list {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.product-image {
+  position: relative;
+  background-color: #f7e6f1;
+  width: 100%; // جعل الصورة تأخذ عرض البطاقة بالكامل
+  height: 272px;
+  border-radius: 20px;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.product-image img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain; // لضمان احتواء الصورة داخل الصندوق
+}
+
+.badge {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  padding: 5px 10px;
+  border-radius: 50px;
+  font-size: 12px;
+  font-weight: 600;
+  color: #fff;
+}
+
+.new-badge {
+  background-color: rgba(248, 43, 169, 1);
+}
+
+.out-of-stock-badge {
+  background-color: #d9534f;
+}
+
+.hot-badge {
+  background-color: #f0ad4e;
+}
+
+.product-info {
+  margin-top: 15px;
+}
+
+.product-name {
+  font-size: 18px;
+  font-weight: 600;
+  color: #333;
+}
+
+.product-rating {
+  color: rgba(251, 167, 7, 1);
+  display: flex;
+  justify-content: center;
+  gap: 4px;
+  margin-top: 5px;
+}
+
+.product-price {
+  margin-top: 10px;
+}
+
+.current-price {
+  font-size: 18px;
+  font-weight: 700;
+  color: rgba(240, 84, 84, 1);
+}
+
+.old-price {
+  font-size: 14px;
+  color: #999;
+  text-decoration: line-through;
+  margin-left: 10px;
+}
+
+.add-to-cart-btn {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #8C52FF;
+  color: #fff;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.product-card:hover .add-to-cart-btn {
+  transform: translateY(0);
+}
+
+.carousel-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  z-index: 2;
+  background-color: #F82BA9;
+  color: #fff;
+  transition: all 0.3s ease;
+}
+
+.carousel-button svg {
+  width: 15px;
+  height: 15px;
+  stroke-width: 2;
+  fill: none;
+}
+
+.carousel-button:hover {
+  background-color: #e0279c;
+}
+
+.carousel-button.prev {
+  left: 0; // تغيير الموضع ليكون داخل الـ padding
+}
+
+.carousel-button.next {
+  right: 0; // تغيير الموضع ليكون داخل الـ padding
+}
+
+@media (max-width: 768px) {
+  .products-section {
+    grid-template-columns: 1fr;
+  }
+  .carousel-button.prev {
+    left: 0;
+  }
+  .carousel-button.next {
+    right: 0;
+  }
+  /* Products Section Styles */
+.products-section {
+  display: grid;
+  grid-template-columns: 1fr 5fr;
+  gap: 30px;
+  margin-top: 50px;
+  align-items: center;
+}
+
+/* Products Header Styles */
+.products-header {
+  // Styles for the header section
+  .subtitle {
+    font-size: 14px;
+    font-weight: 600;
+    color: #F82BA9;
+  }
+
+  .title {
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 1.2;
+    margin: 10px 0;
+  }
+
+  .description {
+    font-size: 16px;
+    color: #666;
+  }
+
+  .explore-btn {
+    background-color: #F82BA9;
+    color: #fff;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+}
+
+/* Products List Container Styles */
+.products-list-container {
+  position: relative;
+  padding: 0 50px;
+  &::after::before{
+      box-sizing: content-box;
+
+  }
+}
+
+
+/* Products List & Card Styles */
+.products-list {
+  display: flex;
+  gap: 24px;
+  scroll-behavior: smooth;
+  overflow-x: auto;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+  &::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera */
+  }
+}
+
+.product-card {
+  flex-shrink: 0;
+  min-width: 302px;
+  background-color: #ffffff;
+  border-radius: 16px;
+  padding: 16px;
+  text-align: center;
+  position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-image {
+  position: relative;
+  background-color: #f7e6f1;
+  width: 100%;
+  height: 272px;
+  border-radius: 20px;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+  }
+}
+
+.badge {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  padding: 5px 10px;
+  border-radius: 50px;
+  font-size: 12px;
+  font-weight: 600;
+  color: #fff;
+}
+
+.new-badge {
+  background-color: rgba(248, 43, 169, 1);
+}
+
+.out-of-stock-badge {
+  background-color: #d9534f;
+}
+
+.hot-badge {
+  background-color: #f0ad4e;
+}
+
+.product-info {
+  margin-top: 15px;
+  .product-name {
+    font-size: 18px;
+    font-weight: 600;
+    color: #333;
+  }
+  .product-rating {
+    color: rgba(251, 167, 7, 1);
+    display: flex;
+    justify-content: center;
+    gap: 4px;
+    margin-top: 5px;
+  }
+  .product-price {
+    margin-top: 10px;
+    .current-price {
+      font-size: 18px;
+      font-weight: 700;
+      color: rgba(240, 84, 84, 1);
+    }
+    .old-price {
+      font-size: 14px;
+      color: #999;
+      text-decoration: line-through;
+      margin-left: 10px;
+    }
+  }
+}
+
+.add-to-cart-btn {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #8C52FF;
+  color: #fff;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+/* Carousel Button Styles */
+.carousel-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  z-index: 2;
+  background-color: #F82BA9;
+  color: #fff;
+  transition: all 0.3s ease;
+
+  svg {
+    width: 15px;
+    height: 15px;
+    stroke-width: 2;
+    fill: none;
+  }
+  &:hover {
+    background-color: #e0279c;
+  }
+}
+
+.carousel-button.prev {
+  left: 0;
+}
+
+.carousel-button.next {
+  right: 0;
+}
+.pink-in{
+  color: #e0279c;
+}
+// .products-list{
+
+// align-content: space-between;
+// }
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+  .products-section {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .products-list-container {
+    padding: 0 20px; /* تقليل البادينج على الشاشات الصغيرة */
+  }
+
+  .products-header {
+    margin-bottom: 20px;
+    padding: 0 20px;
+    text-align: start;
+
+    .title {
+      font-size: 28px;
+    }
+    .explore-btn {
+      margin: 20px auto 0;
+    }
+  }
+
+  .product-card {
+    min-width: 80vw; /* جعل البطاقة تأخذ 80% من عرض الشاشة */
+    max-width: 300px;
+    margin: 0 10px; /* تقليل المسافة بين البطاقات */
+  }
+
+  .products-list {
+    gap: 20px;
+    overflow-x: scroll; /* السماح بالتمرير اليدوي على الشاشات الصغيرة */
+  }
+
+
+}
+}

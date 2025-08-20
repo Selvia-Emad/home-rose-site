@@ -1,0 +1,137 @@
+/* Discount Section Styles */
+.discount-section {
+  padding: 80px 0;
+  background-image: url('../../../../assets/images/footer.png');
+  background-position: center;
+  text-align: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+.content-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.nav-links {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin-bottom: 50px;
+}
+
+.nav-links a {
+  color: #160E4B;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #F82BA9;
+}
+
+.coupon-box {
+  border-radius: 20px;
+  padding: 50px;
+  max-width: 700px;
+  margin: 0 auto;
+  color: #160E4B;
+}
+
+.coupon-title {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.coupon-title .highlight {
+  color: #F82BA9;
+}
+
+.coupon-subtitle {
+  font-size: 16px;
+  color: #616161;
+  margin-bottom: 30px;
+}
+
+.form-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  height: 49px;
+}
+
+.form-wrapper input {
+  padding: 16px;
+  border: 1px solid rgba(246, 213, 235, 1);
+  border-radius: 30px;
+  width: 400px;
+  height: 49px;
+  font-size: 16px;
+  box-sizing: border-box;
+  background-color: #fff;
+}
+
+.form-wrapper input::placeholder {
+  color: #D6D6D6;
+}
+.subscribe-btn {
+  background-color: #F82BA9;
+  color: #fff;
+  border: none;
+  border-radius: 30px;
+  padding: 8px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transition: background-color 0.3s ease;
+  height: 49px;
+  border-radius: 30px;
+}
+
+.subscribe-btn:hover {
+  background-color: #e0279c;
+}
+
+@media (max-width: 768px) {
+  .discount-section {
+    padding: 40px 15px;
+  }
+
+  .nav-links {
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 30px;
+  }
+
+  .nav-links a {
+    font-size: 14px;
+  }
+
+  .coupon-title {
+    font-size: 28px;
+  }
+
+  .form-wrapper {
+    gap: 15px;
+    height: auto;
+    
+  }
+
+  .form-wrapper input {
+    border-radius: 10px;
+  }
+
+  .subscribe-btn {
+
+    border-radius: 10px;
+  }
+
+
+}

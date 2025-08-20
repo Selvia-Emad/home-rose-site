@@ -1,19 +1,10 @@
 /* You can add global styles to this file, and also import other style files */
-:root {
-  --primary-color: #ff4081;
-  --secondary-color: #fce4ec;
-  --text-color: #333;
-  --light-pink: #fff5f8;
-}
+
 
 body {
   font-family: 'Poppins', sans-serif;
 }
-.container{
-  width: 1441;
-height: 3001;
-gap: 80px;
-
-opacity: 1;
+.main-container{
+width: 95%;
+margin: auto;
 }
-

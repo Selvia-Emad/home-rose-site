@@ -1,0 +1,189 @@
+/* Container for the entire products section */
+.products-section {
+  padding-block: 50px;
+}
+
+
+
+/* Main title styling */
+.title p {
+  font-size: 30px;
+  font-weight: 700;
+  color: #160E4B;
+  text-shadow: 1px 1px 1px #F82BA9;
+  // margin-bottom: 3rem;
+}
+
+// nav bar
+.main-nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+height: 29;
+opacity: 1;
+gap: 24px;
+
+}
+
+.main-nav a {
+  text-decoration: none;
+  color:var(--color-blue-17, rgba(22, 14, 75, 1));;
+  font-weight: 500;
+
+  font-size: 16px;
+  line-height: 28.8px;
+  letter-spacing: 0;
+  text-transform: capitalize;
+  vertical-align: middle;
+
+
+
+  transition: all 300ms ease-in-out;
+}
+
+a{
+  color: #F82BA9;
+}
+
+
+/* Container for all product cards */
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start; /* Changed to align from the start */
+  gap: 20px;
+  padding: 0 20px;
+ width: 100%; /* Constraining the max width for better layout on large screens */
+  margin: 0 auto; /* Centering the cards container */
+}
+
+/* Styling for a single product card */
+.product-card {
+  /* Set width to show 4 cards per row with a gap */
+  width: calc(25% - 15px);
+  /* Adjustments for various screen sizes to fit 4 cards */
+  @media (min-width: 1024px) {
+    width: calc(25% - 15px); /* On large desktops, 4 cards per row */
+  }
+
+  /* Fixed height for consistent card size */
+  height: 400px;
+  background-color: #fff;
+  border-radius: 20px;
+  padding: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+/* Image container styling */
+.image-container {
+  width: 100%;
+  height: 272px;
+  border-radius: 20px;
+  background-color: #FEEDF7;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+/* Overlay for hover effect on the image */
+.image-hover {
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  background-color: #F82BA9B2;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 1000ms;
+}
+
+.image-hover:hover {
+  opacity: 1;
+}
+
+.image-hover p {
+  font-size: 18px;
+  font-weight: 500;
+  color: white;
+}
+
+/* Styling for the product image inside the container */
+.product-image {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+/* Styling for the product name */
+.product-name {
+  font-size: 17px;
+  font-weight: 600;
+  color: #160E4B;
+  margin-top: 10px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+/* Styling for the product price */
+.product-price {
+  font-size: 16px;
+  font-weight: 500;
+  color: goldenrod;
+}
+
+/* Rating stars styling */
+.rating {
+  margin-top: 5px;
+}
+
+.rate-icon {
+  color: goldenrod;
+}
+
+/* Buy button styling */
+.icon-btn {
+  background-color: #8A2BE2;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+  border: none;
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+}
+
+.icon-btn:hover {
+  background-color: #7a23cc;
+}
+
+/* Responsive design adjustments */
+@media (max-width: 800px) {
+  .cards {
+    justify-content: space-evenly;
+  }
+  .product-card {
+    width: calc(50% - 10px); /* 2 cards on mobile */
+  }
+}
+
+@media (max-width: 480px) {
+  .product-card {
+    width: 100%; /* 1 card on extra small screens */
+  }
+}

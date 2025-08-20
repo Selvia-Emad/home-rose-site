@@ -1,0 +1,39 @@
+.hero-section {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+}
+
+.main-banner {
+  display: flex;
+  justify-content: space-between;
+  background-color: #fce8f0; /* ده لون الـ pink اللي في التصميم */
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+.banner-content {
+  padding: 50px;
+}
+
+/* ممكن تضيفي كود الـ CSS لبقية الأجزاء */
+.small-banners {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.features-row {
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid #eee;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.feature-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
