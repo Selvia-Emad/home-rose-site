@@ -10,6 +10,8 @@
   border-radius: 20px;
   text-align: center;
 }
+.logo-grid::-webkit-scrollbar { display: none; }
+
 
 .section-title {
   font-size: 28px;
@@ -27,6 +29,8 @@
   justify-content: space-between;
   align-items: center;
   gap: 30px;
+    overflow-x: scroll;
+
 }
 
 .logo-grid img {
@@ -58,63 +62,4 @@ text-transform: uppercase;
 
 }
 
-}
-
-
-.trusted-by-section {
-  padding: 80px 0;
-}
-
-.trusted-by-container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 50px;
-  background-color: #fce7f2;
-  border-radius: 20px;
-  text-align: center;
-}
-
-.section-title {
-  font-size: 28px;
-  font-weight: 700;
-  color: #333;
-  margin-bottom: 40px;
-}
-
-.section-title .highlight {
-  color: #F82BA9;
-}
-
-/* New Styles for Carousel */
-.logo-grid { display: flex; justify-content: space-between; align-items: center; gap: 30px;
-}
-
-.logo-item {
-  text-align: center;
-  margin: 0 15px;
-}
-
-.logo-item img {
-  max-width: 120px;
-  height: auto;
-  opacity: 0.7;
-  transition: opacity 0.3s ease;
-}
-
-.logo-item img:hover {
-  opacity: 1;
-}
-
-/* Hide Owl Carousel navigation and dots if not needed */
-:host ::ng-deep .owl-theme .owl-nav {
-  // display: none;
-}
-:host ::ng-deep .owl-theme .owl-dots {
-  // display: none;
-}
-
-@media (max-width: 768px) {
-  .logo-item img {
-    max-width: 80px;
-  }
 }
