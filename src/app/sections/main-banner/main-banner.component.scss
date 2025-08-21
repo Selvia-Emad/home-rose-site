@@ -1,269 +1,344 @@
+// /*
+//   Main Component Styles
+// */
+// .main-banner-section {
+//   display: flex;
+//   gap: 15px;
+//   padding-block: 20px;
+// }
 
-    body {
-      font-family: 'Inter', sans-serif;
-      overflow-x: hidden;
-    }
+// /*
+//   Left Section - Carousel Container
+// */
+// .banner-left-container {
+//   flex: 2;
+//   min-height: 500px;
+//   border-radius: 20px;
+//   position: relative;
+//   overflow: hidden;
+// }
 
-    .main-banner-section {
-      display: flex;
-      gap: 15px;
-      padding-block: 20px;
-    }
+// /*
+//   Right Section - Fixed Banner
+// */
+// .banner-right-container {
+//   flex: 1;
+//   min-height: 500px;
+//   background-image: url('../../../assets/images/banner-left.png');
+//   background-size: cover;
+//   background-position: center;
+//   background-repeat: no-repeat;
+//   border-radius: 20px;
+//   position: relative;
+//   display: flex;
+//   align-items: flex-end;
 
-    // Carousel section
+//   .banner-content {
+//     color: #fff;
+//     padding: 40px;
+//   }
+// }
 
-    .banner-left-container {
-      flex: 2;
-      min-height: 500px;
-      border-radius: 20px;
-      position: relative;
-      overflow: hidden;
-    }
+// /*
+//   Carousel Items
+// */
+// .carousel-item {
+//   height: 500px; /* Set a fixed height for the carousel slides */
+//   background-size: cover;
+//   background-position: center;
+//   background-repeat: no-repeat;
+//   display: flex;
+//   align-items: center;
+//   justify-content: space-between;
+//   padding: 40px 60px;
+//   position: relative;
 
-    .carousel-content {
-      width: 100%;
-      height: 100%;
-      position: relative;
-    }
+//   /* Slide backgrounds (you can move this logic to a dynamic style binding in HTML) */
+//   &:nth-child(1) {
+//     background-image: url("../../../assets/images/banner-right.jpg");
+//   }
+//   &:nth-child(2) {
+//     background-image: url("../../../assets/images/banner-right.jpg");
+//   }
+//   &:nth-child(3) {
+//     background-image: url("../../../assets/images/banner-right.jpg");
+//   }
+// }
 
-    .carousel-inner {
-      display: flex;
-      height: 100%;
-      transition: transform 0.5s ease-in-out; /* Smooth transition */
-    }
+// /*
+//   Carousel Dots (Indicators)
+// */
+// :host ::ng-deep .owl-theme .owl-dots {
+//   position: absolute;
+//   bottom: 20px;
+//   left: 60px;
+//   right: auto;
+//   display: flex;
+//   gap: 7px;
+//   z-index: 10;
+// }
 
-    .carousel-item {
-      flex: 0 0 100%;
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 40px 60px;
-      position: relative;
-    }
+// :host ::ng-deep .owl-theme .owl-dots .owl-dot span {
+//   width: 7px;
+//   height: 7px;
+//   border-radius: 50%;
+//   background-color: #D3D3D3;
+//   border: none;
+//   transition: all 0.3s ease;
+//   margin: 0; /* Remove default margin */
+// }
 
-    .carousel-item::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-    }
+// :host ::ng-deep .owl-theme .owl-dots .owl-dot.active span {
+//   width: 30px;
+//   border-radius: 3.5px;
+//   background-color: #F82BA9;
+// }
 
-    /* Slide backgrounds */
-    .carousel-item:nth-child(1) {
-      background-image: url("../../../assets/images/banner-right.jpg");
-    }
+// /*
+//   Carousel Arrows (Navigation)
+// */
+// :host ::ng-deep .owl-theme .owl-nav {
+//   position: absolute;
+//   top: 50%;
+//   width: 100%;
+//   transform: translateY(-50%);
+//   display: flex;
+//   justify-content: space-between;
+//   padding: 0 60px; /* Match padding with the content */
+//   box-sizing: border-box;
+// }
 
-    .carousel-item:nth-child(2) {
-      background-image: url("../../../assets/images/banner-right.jpg");
-    }
+// :host ::ng-deep .owl-theme .owl-nav .owl-prev,
+// :host ::ng-deep .owl-theme .owl-nav .owl-next {
+//   background-color: #fff !important;
+//   border-radius: 50% !important;
+//   width: 35px !important;
+//   height: 35px !important;
+//   display: flex !important;
+//   align-items: center;
+//   justify-content: center;
+//   cursor: pointer;
+//   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+//   transition: all 0.3s ease;
+//   z-index: 10;
+// }
 
-    .carousel-item:nth-child(3) {
-      background-image: url("../../../assets/images/banner-right.jpg");
-    }
+// :host ::ng-deep .owl-theme .owl-nav .owl-prev:hover,
+// :host ::ng-deep .owl-theme .owl-nav .owl-next:hover {
+//   background-color: #F82BA9 !important;
+// }
 
-    .slide-content {
-      max-width: 450px;
-      position: relative;
-      z-index: 1;
-    }
+// /* SVG icons */
+// :host ::ng-deep .owl-theme .owl-nav .owl-prev span,
+// :host ::ng-deep .owl-theme .owl-nav .owl-next span {
+//   display: none; /* Hide default text */
+// }
 
-    .slide-content .subtitle {
-      font-size: 14px;
-      font-weight: 600;
-      color:  #F82BA9;
-      margin-bottom: 10px;
-    }
+// :host ::ng-deep .owl-theme .owl-nav .owl-prev::before {
+//   content: '';
+//   display: block;
+//   width: 15px;
+//   height: 15px;
+//   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke-width='1.5' stroke='%232D2D2D'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' d='M15.75 19.5 8.25 12l7.5-7.5' /%3E%3C/svg%3E");
+//   background-size: contain;
+//   background-repeat: no-repeat;
+//   background-position: center;
+// }
 
-    .slide-content .title {
-      font-size: 44px;
-      font-weight: 800;
-      color: #2D2D2D;
-      line-height: 1.2;
-    }
+// :host ::ng-deep .owl-theme .owl-nav .owl-next::before {
+//   content: '';
+//   display: block;
+//   width: 15px;
+//   height: 15px;
+//   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke-width='1.5' stroke='%232D2D2D'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' d='M8.25 4.5l7.5 7.5-7.5 7.5' /%3E%3C/svg%3E");
+//   background-size: contain;
+//   background-repeat: no-repeat;
+//   background-position: center;
+// }
 
-    .gifts-text {
-      color:  #F82BA9;
-    }
+// :host ::ng-deep .owl-theme .owl-nav .owl-prev:hover::before,
+// :host ::ng-deep .owl-theme .owl-nav .owl-next:hover::before {
+//   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke-width='1.5' stroke='%23ffffff'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' d='M15.75 19.5 8.25 12l7.5-7.5' /%3E%3C/svg%3E");
+// }
 
-    .slide-content .description {
-      font-size: 14px;
-      color: #9B9B9B;
-      line-height: 1.5;
-      margin-top: 15px;
-    }
-
-    .shop-now-btn {
-      background-color:  #F82BA9;
-      color: #fff;
-      border: none;
-      border-radius: 14px;
-      padding: 12px 25px;
-      font-weight: 600;
-      cursor: pointer;
-      transition: all 0.3s ease;
-      margin-top: 20px;
-    }
-
-    // .shop-now-btn:hover {
-    //   background-color: #d3208c;
-    // }
-
-    .arrow {
-      margin-left: 10px;
-    }
-
-    /*
-    * Right Section - The Fixed Banner
-    */
-    .banner-right-container {
-      flex: 1; /* Banner takes up less space */
-      min-height: 500px;
-      background-image: url('../../../assets/images/banner-left.png'); /* Placeholder image */
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
-      border-radius: 20px;
-      position: relative;
-      display: flex;
-      align-items: flex-end;
-
-
-
-
-
-    }
-
-    .banner-right-container .banner-content {
-      color: #fff;
-      padding: 40px;
-
-    }
-
-    .banner-right-container .subtitle {
-      font-size: 14px;
-      font-weight: 600;
+// :host ::ng-deep .owl-theme .owl-nav .owl-next:hover::before {
+//   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke-width='1.5' stroke='%23ffffff'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' d='M8.25 4.5l7.5 7.5-7.5 7.5' /%3E%3C/svg%3E");
+// }
 
 
-    }
+/*
+  Main Component Styles
+*/
+.main-banner-section {
+  display: flex;
+  gap: 15px;
+  padding-block: 20px;
+}
 
-    .banner-right-container .title {
-      font-size: 32px;
-      font-weight: 700;
-      line-height: 1.2;
-      color: #160E4B;
-      font-family: font family/Font 1;
-font-weight: font weight/600;
-font-style: normal Bold;
-font-size: 26.09px;
-line-height: 31.31px;
-letter-spacing: 0%;
-vertical-align: middle;
+/*
+  Left Section - Fixed Banner
+*/
+.banner-left-container {
+  flex: 1;
+  min-height: 500px;
+  background-image: url('../../../assets/images/banner-left.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 20px;
+  position: relative;
+  display: flex;
+  align-items: flex-end;
 
-    }
+  .banner-content {
+    color: #fff;
+    padding: 40px;
+  }
+}
 
-    /*
-    * Carousel Controls
-    */
-    .carousel-indicators {
-      position: absolute;
-      bottom: 20px;
-      left: 60px; /* Move indicators to the left */
-      right: auto;
-      display: flex;
-      gap: 7px;
-      z-index: 10;
-    }
+/*
+  Right Section - Carousel Container
+*/
+.banner-right-container {
+  flex: 2;
+  min-height: 500px;
+  border-radius: 20px;
+  position: relative;
+  overflow: hidden;
+}
 
-    .indicator {
-      width: 7px;
-      height: 7px;
-      border-radius: 50%;
-      background-color: #D3D3D3;
-      border: none;
-      cursor: pointer;
-      transition: all 0.3s ease;
-    }
+.carousel-item {
+  height: 500px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 40px 60px;
+  position: relative;
+}
 
-    .indicator.active {
-      width: 30px;
-      border-radius: 3.5px;
-      background-color:  #F82BA9;
-    }
+.slide-content {
+  max-width: 450px;
+  position: relative;
+  z-index: 1;
+}
 
-    .slider-arrows {
-      position: absolute;
-      bottom: 20px;
-      right: 60px; /* Move arrows to the right */
-      left: auto;
-      display: flex;
-      gap: 10px;
-      z-index: 10;
-    }
+.gifts-text {
+  color: #F82BA9;
+}
 
-    .arrow-button {
-      background-color: #fff;
-      border: none;
-      border-radius: 50%;
-      width: 35px;
-      height: 35px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      cursor: pointer;
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-      transition: all 0.3s ease;
-    }
+.shop-now-btn {
+  background-color: #F82BA9;
+  color: #fff;
+  border: none;
+  border-radius: 14px;
+  padding: 12px 25px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 20px;
+}
 
-    .arrow-button:hover {
-      background-color:  #F82BA9;
-    }
+/*
+  Carousel Dots (Indicators)
+*/
+:host ::ng-deep .owl-theme .owl-dots {
+  position: absolute;
+  bottom: 20px;
+  left: 60px;
+  right: auto;
+  display: flex;
+  gap: 7px;
+  z-index: 10;
+}
 
-    .arrow-button svg {
-      width: 15px;
-      height: 15px;
-      stroke: #2D2D2D;
-      stroke-width: 2;
-      fill: none;
-    }
+:host ::ng-deep .owl-theme .owl-dots .owl-dot span {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background-color: #D3D3D3;
+  border: none;
+  transition: all 0.3s ease;
+  margin: 0;
+}
 
-    .arrow-button:hover svg {
-      stroke: #fff;
-    }
+:host ::ng-deep .owl-theme .owl-dots .owl-dot.active span {
+  width: 30px;
+  border-radius: 3.5px;
+  background-color: #F82BA9;
+}
 
-    /*
-    * Responsive Design
-    */
-    @media (max-width: 992px) {
-      .main-banner-section {
-        flex-direction: column;
-      }
-      .banner-left-container,
-      .banner-right-container {
-        min-height: 300px;
-        width: 100%;
-      }
-      .carousel-item {
-        flex-direction: column;
-        text-align: center;
-        padding: 30px 20px;
-      }
-      .slide-content {
-        max-width: 100%;
-      }
-      .carousel-indicators,
-      .slider-arrows {
-        left: 50%;
-        transform: translateX(-50%);
-        bottom: 10px;
-      }
-      .slider-arrows {
-        right: auto;
-        bottom: 50px;
-      }
-    }
+/*
+  Carousel Arrows (Navigation)
+*/
+:host ::ng-deep .owl-theme .owl-nav {
+  position: absolute;
+  bottom: 20px;
+  right: 60px;
+  display: flex;
+  gap: 10px;
+  z-index: 10;
+  width: auto;
+  top: auto;
+  transform: none;
+}
 
+:host ::ng-deep .owl-theme .owl-nav .owl-prev,
+:host ::ng-deep .owl-theme .owl-nav .owl-next {
+  background-color: #fff !important;
+  border-radius: 50% !important;
+  width: 35px !important;
+  height: 35px !important;
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  z-index: 10;
+  margin: 0;
+}
+
+:host ::ng-deep .owl-theme .owl-nav .owl-prev:hover,
+:host ::ng-deep .owl-theme .owl-nav .owl-next:hover {
+  background-color: #F82BA9 !important;
+}
+
+/* SVG icons */
+:host ::ng-deep .owl-theme .owl-nav .owl-prev span,
+:host ::ng-deep .owl-theme .owl-nav .owl-next span {
+  display: none;
+}
+
+:host ::ng-deep .owl-theme .owl-nav .owl-prev::before {
+  content: '';
+  display: block;
+  width: 15px;
+  height: 15px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke-width='1.5' stroke='%232D2D2D'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' d='M15.75 19.5 8.25 12l7.5-7.5' /%3E%3C/svg%3E");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+:host ::ng-deep .owl-theme .owl-nav .owl-next::before {
+  content: '';
+  display: block;
+  width: 15px;
+  height: 15px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke-width='1.5' stroke='%232D2D2D'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' d='M8.25 4.5l7.5 7.5-7.5 7.5' /%3E%3C/svg%3E");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+:host ::ng-deep .owl-theme .owl-nav .owl-prev:hover::before,
+:host ::ng-deep .owl-theme .owl-nav .owl-next:hover::before {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke-width='1.5' stroke='%23ffffff'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' d='M15.75 19.5 8.25 12l7.5-7.5' /%3E%3C/svg%3E");
+}
+
+:host ::ng-deep .owl-theme .owl-nav .owl-next:hover::before {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke-width='1.5' stroke='%23ffffff'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' d='M8.25 4.5l7.5 7.5-7.5 7.5' /%3E%3C/svg%3E");
+}

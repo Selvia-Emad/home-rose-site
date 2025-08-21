@@ -1,5 +1,4 @@
-<section class="main-banner-section">
-  <!-- Right Section - Fixed Banner -->
+<!-- <section class="main-banner-section">
   <div class="banner-right-container">
     <div class="banner-content">
       <p class="subtitle">START $10.99</p>
@@ -8,11 +7,9 @@
     </div>
   </div>
 
-  <!-- Left Section - Carousel -->
   <div class="banner-left-container">
     <div class="carousel-content">
       <div class="carousel-inner">
-        <!-- Slide 1 -->
         <div class="carousel-item">
           <div class="slide-content">
             <p class="subtitle">BEST GIFT SHOP</p>
@@ -26,7 +23,6 @@
             <button class="shop-now-btn">Shop Now <span class="arrow">→</span></button>
           </div>
         </div>
-        <!-- Slide 2 -->
         <div class="carousel-item">
           <div class="slide-content">
             <p class="subtitle">Another Gift</p>
@@ -40,7 +36,6 @@
             <button class="shop-now-btn">Shop Now <span class="arrow">→</span></button>
           </div>
         </div>
-        <!-- Slide 3 -->
         <div class="carousel-item">
           <div class="slide-content">
             <p class="subtitle">Seasonal Special</p>
@@ -56,14 +51,12 @@
         </div>
       </div>
 
-      <!-- Carousel Indicators -->
       <div class="carousel-indicators">
         <button class="indicator active"></button>
         <button class="indicator"></button>
         <button class="indicator"></button>
       </div>
 
-      <!-- Carousel Arrows -->
       <div class="slider-arrows">
         <button class="arrow-button prev">
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
@@ -77,5 +70,54 @@
         </button>
       </div>
     </div>
+  </div>
+</section> -->
+
+<!-- <section class="main-banner-section">
+  <div class="banner-right-container">
+    <div class="banner-content">
+      <p class="subtitle">START $10.99</p>
+      <h3 class="title">Special Gifts Box<br>For Your Love</h3>
+      <button class="shop-now-btn">Shop Now <span class="arrow">→</span></button>
+    </div>
+  </div>
+
+  <div class="banner-left-container">
+    <owl-carousel-o [options]="customOptions" class="main-banner-carousel">
+      <ng-template carouselSlide *ngFor="let slide of slides">
+        <div class="carousel-item">
+          <div class="slide-content">
+            <p class="subtitle">{{ slide.subtitle }}</p>
+            <h1 class="title" [innerHTML]="slide.title"></h1>
+            <p class="description" [innerHTML]="slide.description"></p>
+            <button class="shop-now-btn">Shop Now <span class="arrow">→</span></button>
+          </div>
+        </div>
+      </ng-template>
+    </owl-carousel-o>
+  </div>
+</section> -->
+<section class="main-banner-section">
+  <div class="banner-left-container">
+    <div class="banner-content">
+      <p class="subtitle">START $10.99</p>
+      <h3 class="title">Special Gifts Box<br>For Your Love</h3>
+      <button class="shop-now-btn">Shop Now <span class="arrow">→</span></button>
+    </div>
+  </div>
+
+  <div class="banner-right-container">
+    <owl-carousel-o [options]="customOptions" class="main-banner-carousel">
+      <ng-template carouselSlide *ngFor="let slide of slides">
+        <div class="carousel-item" [ngStyle]="{'background-image': slide.imageUrl}">
+          <div class="slide-content">
+            <p class="subtitle">{{ slide.subtitle }}</p>
+            <h1 class="title" [innerHTML]="slide.title"></h1>
+            <p class="description" [innerHTML]="slide.description"></p>
+            <button class="shop-now-btn">Shop Now <span class="arrow">→</span></button>
+          </div>
+        </div>
+      </ng-template>
+    </owl-carousel-o>
   </div>
 </section>

@@ -1,107 +1,34 @@
-<section class="testimonials-section"> <!-- الخلفية الوردية مع الأشكال الشفافة -->
-  <div class="background-shape"></div>
-  <div class="content-wrapper">
-    <div class="container">
-      <div class="carousel-wrapper"> <!-- زر السلايدر السابق --> <button class="carousel-button prev"> <svg
-            xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
-            class="w-6 h-6">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5 8.25 12l7.5-7.5" />
-          </svg> </button> <!-- حاوية البطاقات القابلة للتمرير -->
-        <div class="carousel-slide"> <!-- بطاقة التقييم الأولى -->
-          <div class="testimonial-card">
-            <div class="customer-info">
-              <div class="customer-image"> <img src="assets/images/photo2.jpg" alt="Customer Photo"> </div>
-              <div class="customer-details">
-                <h3>Ahmed Mohamed</h3>
-                <p class="customer-role">Customer</p>
-              </div>
+<section class="testimonials-section">
+  <div class="testimonials-container">
+    <owl-carousel-o [options]="customOptions">
+      <ng-template carouselSlide *ngFor="let testimonial of testimonials">
+        <div class="testimonial-card">
+          <div class="user-info">
+            <div class="photo-circle">
+              <img [src]="testimonial.photo" [alt]="testimonial.name">
             </div>
-            <p class="testimonial-text"> Sunt in culpa qui officia deserunt mollit anim id est laborum. Ut enim ad minim
-              veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip. </p>
-            <div class="card-footer">
-              <div class="rating"> <span class="star active">★</span><span class="star active">★</span><span
-                  class="star active">★</span><span class="star active">★</span><span class="star inactive">★</span>
-              </div>
-              <div class="speech-bubble"></div>
-            </div>
-          </div> <!-- بطاقة التقييم الثانية -->
-          <div class="testimonial-card">
-            <div class="customer-info">
-              <div class="customer-image"> <img src="assets/images/photo1.jpg" alt="Customer Photo"> </div>
-              <div class="customer-details">
-                <h3>Farah Ali</h3>
-                <p class="customer-role">Customer</p>
-              </div>
-            </div>
-            <p class="testimonial-text"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor
-              incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam. </p>
-            <div class="card-footer">
-              <div class="rating"> <span class="star active">★</span><span class="star active">★</span><span
-                  class="star active">★</span><span class="star active">★</span><span class="star active">★</span>
-              </div>
-              <div class="speech-bubble"></div>
-            </div>
-          </div> <!-- بطاقة التقييم الثالثة -->
-          <div class="testimonial-card">
-            <div class="customer-info">
-              <div class="customer-image"> <img src="assets/images/photo3.jpg" alt="Customer Photo"> </div>
-              <div class="customer-details">
-                <h3>Mohamed Yasser</h3>
-                <p class="customer-role">Customer</p>
-              </div>
-            </div>
-            <p class="testimonial-text"> Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-              fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident. </p>
-            <div class="card-footer">
-              <div class="rating"> <span class="star active">★</span><span class="star active">★</span><span
-                  class="star active">★</span><span class="star inactive">★</span><span class="star inactive">★</span>
-              </div>
-              <div class="speech-bubble"></div>
-            </div>
-          </div> <!-- بطاقة التقييم الرابعة -->
-          <div class="testimonial-card">
-            <div class="customer-info">
-              <div class="customer-image"> <img src="assets/images/photo4.jpg" alt="Customer Photo"> </div>
-              <div class="customer-details">
-                <h3>Hana Ahmed</h3>
-                <p class="customer-role">Customer</p>
-              </div>
-            </div>
-            <p class="testimonial-text"> Sunt in culpa qui officia deserunt mollit anim id est laborum. Ut enim ad minim
-              veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip. </p>
-            <div class="card-footer">
-              <div class="rating"> <span class="star active">★</span><span class="star active">★</span><span
-                  class="star active">★</span><span class="star active">★</span><span class="star active">★</span>
-              </div>
-              <div class="speech-bubble">
-                <div><img src=" assets/icons/🦆 icon _feedback_.png" alt=""></div>
-              </div>
+            <div class="user-details">
+              <h4 class="user-name">{{ testimonial.name }}</h4>
+              <p class="user-title">{{ testimonial.title }}</p>
             </div>
           </div>
-          </div> <!-- بطاقة التقييم الثانية -->
-          <div class="testimonial-card">
-            <div class="customer-info">
-              <div class="customer-image"> <img src="assets/images/photo1.jpg" alt="Customer Photo"> </div>
-              <div class="customer-details">
-                <h3>Farah Ali</h3>
-                <p class="customer-role">Customer</p>
-              </div>
-            </div>
-            <p class="testimonial-text"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor
-              incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam. </p>
-            <div class="card-footer">
-              <div class="rating"> <span class="star active">★</span><span class="star active">★</span><span
-                  class="star active">★</span><span class="star active">★</span><span class="star active">★</span>
-              </div>
-              <div class="speech-bubble"></div>
-            </div>
-        </div> <!-- زر السلايدر التالي --> <button class="carousel-button next"> <svg xmlns="http://www.w3.org/2000/svg"
-            fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
-          </svg> </button>
-      </div> <!-- مؤشرات السلايدر (النقاط) -->
-    </div>
+          <p class="testimonial-text">{{ testimonial.text }}</p>
+
+          <div class="rating-stars">
+            <ng-container *ngFor="let star of [].constructor(testimonial.rating)">
+              ⭐
+            </ng-container>
+            <div class="speech-bubble-svg">
+<svg width="77" height="63" viewBox="0 0 77 63" fill="none" xmlns="http://www.w3.org/2000/svg" class="speech-bubble">
+<path d="M73.5021 38.8921C73.3825 38.4134 73.3825 37.8151 73.7415 37.4561C75.7758 33.7464 76.9725 29.558 76.9725 25.1303C76.9725 11.2488 65.1254 0 50.6455 0C44.4228 0 38.6787 2.15402 34.1313 5.6244C49.0898 8.85543 60.219 21.7796 60.219 37.0971C60.219 41.4051 59.3813 45.5935 57.7059 49.3032C60.0993 48.7049 62.373 47.7475 64.527 46.4312C65.0057 46.1918 65.4844 46.0722 65.963 46.3115L73.6218 49.0639C74.9381 49.5426 76.2545 48.2262 75.8955 46.7902L73.5021 38.8921Z" fill="#F82BA9" fill-opacity="0.2"/>
+<path d="M26.7117 11.9668C12.2319 11.9668 0.384766 23.2156 0.384766 37.0971C0.384766 41.5248 1.58144 45.7132 3.73547 49.4229C3.9748 49.9016 4.09447 50.3802 3.97481 50.8589L1.46178 58.8767C0.983105 60.3127 2.29945 61.629 3.73547 61.1503L11.3942 58.398C11.8729 58.2783 12.4712 58.2783 12.8302 58.5177C16.8989 60.911 21.566 62.2274 26.7117 62.2274C41.1916 62.2274 53.0387 50.9786 53.0387 37.0971C53.0387 23.2156 41.1916 11.9668 26.7117 11.9668ZM12.3516 41.8838C9.71887 41.8838 7.56485 39.7298 7.56485 37.0971C7.56485 34.4644 9.71887 32.3104 12.3516 32.3104C14.9843 32.3104 17.1383 34.4644 17.1383 37.0971C17.1383 39.7298 14.9843 41.8838 12.3516 41.8838ZM26.7117 41.8838C24.079 41.8838 21.925 39.7298 21.925 37.0971C21.925 34.4644 24.079 32.3104 26.7117 32.3104C29.3444 32.3104 31.4984 34.4644 31.4984 37.0971C31.4984 39.7298 29.3444 41.8838 26.7117 41.8838ZM41.0719 41.8838C38.4392 41.8838 36.2852 39.7298 36.2852 37.0971C36.2852 34.4644 38.4392 32.3104 41.0719 32.3104C43.7046 32.3104 45.8586 34.4644 45.8586 37.0971C45.8586 39.7298 43.7046 41.8838 41.0719 41.8838Z" fill="#F82BA9" fill-opacity="0.2"/>
+</svg>
+</div>
+          </div>
+
+
+        </div>
+      </ng-template>
+    </owl-carousel-o>
   </div>
-  <div class="carousel-indicators"> <button class="indicator" *ngFor="let i of [0, 1]; let index = index"
-      [class.active]="currentIndex === index" (click)="goToSlide(index)"></button> </div>
 </section>

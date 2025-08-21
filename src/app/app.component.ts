@@ -11,7 +11,7 @@ import { ServicesBarComponent } from "./sections/services-bar/services-bar.compo
 import { ProductListingComponent } from "./pages/components/product-listing.component/product-listing.component";
 import { AboutUsComponent } from "./sections/about-us/about-us.component";
 import { PhotoGalleryComponent } from "./sections/photo-gallery/photo-gallery.component";
-import { TestimonialsCarouselComponent } from "./sections/testimonials-carousel/testimonials-carousel.component";
+import {  TestimonialsComponent } from "./sections/testimonials-carousel/testimonials-carousel.component";
 import { TrustedByComponent } from "./sections/trusted-by/trusted-by.component";
 import { FooterComponent } from "./pages/components/footer/footer.component";
 import { ProductsComponent } from "./pages/components/products/products.component";
@@ -23,7 +23,7 @@ import { CarouselModule, OwlOptions } from 'ngx-owl-carousel-o';
 @Component({
   selector: 'app-root',
   imports: [
-    CarouselModule ,
+    CarouselModule,
     RouterOutlet,
     HeaderComponent,
     HeroSectionComponent,
@@ -34,10 +34,12 @@ import { CarouselModule, OwlOptions } from 'ngx-owl-carousel-o';
     MainBannerComponent,
     SmallBannersComponent,
     ServicesBarComponent,
-ProductListingComponent ,
-AboutUsComponent ,
-PhotoGalleryComponent ,
-TestimonialsCarouselComponent , TrustedByComponent , FooterComponent,ProductsComponent],
+    ProductListingComponent,
+    AboutUsComponent,
+    PhotoGalleryComponent,
+    TestimonialsComponent, TrustedByComponent, FooterComponent, ProductsComponent,
+    TestimonialsComponent
+],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })

@@ -471,3 +471,102 @@
 
 }
 }
+/* Carousel Button Styles */
+.owl-theme .owl-nav [class*=owl-] {
+    color: #FFF;
+    font-size: 14px;
+    margin: 5px;
+    padding: 4px 7px;
+    background: #F82BA9;
+    display: inline-block;
+  //   cursor: pointer;
+  //   border-radius: 50%;
+  //   position: absolute;
+  // top: 50%;
+  // transform: translateY(-50%);
+  // border: none;
+  // border-radius: 50%;
+  // width: 40px;
+  // height: 40px;
+  // display: flex;
+  // align-items: center;
+  // justify-content: center;
+  // cursor: pointer;
+  // box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  // z-index: 2;
+  // background-color: #F82BA9;
+  // color: #fff;
+  // transition: all 0.3s ease;
+}
+
+
+:host ::ng-deep .owl-theme .owl-nav .owl-prev,
+:host ::ng-deep .owl-theme .owl-nav .owl-next {
+  background-color: #F82BA9 !important;
+  border-radius: 50% !important;
+  width: 40px !important;
+  height: 40px !important;
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  z-index: 2;
+  transition: all 0.3s ease;
+  margin: 0;
+}
+
+:host ::ng-deep .owl-theme .owl-nav .owl-prev:hover,
+:host ::ng-deep .owl-theme .owl-nav .owl-next:hover {
+  background-color: #F82BA9 !important;
+}
+
+/* SVG icons for arrows */
+:host ::ng-deep .owl-theme .owl-nav .owl-prev span,
+:host ::ng-deep .owl-theme .owl-nav .owl-next span {
+  display: none;
+}
+
+:host ::ng-deep .owl-theme .owl-nav .owl-prev::before {
+  content: '‹';
+  font-size: 2em;
+  color: #F82BA9;
+  line-height: 1;
+}
+
+:host ::ng-deep .owl-theme .owl-nav .owl-next::before {
+  content: '›';
+  font-size: 2em;
+  color: #F82BA9;
+  line-height: 1;
+}
+
+:host ::ng-deep .owl-theme .owl-nav .owl-prev:hover::before,
+:host ::ng-deep .owl-theme .owl-nav .owl-next:hover::before {
+  color: #fff;
+}
+
+/* Carousel Indicators */
+:host ::ng-deep .owl-theme .owl-dots {
+  display: flex;
+  gap: 7px;
+  justify-content: center;
+  margin-top: 40px;
+  height: 16px;
+  align-items: center;
+}
+
+:host ::ng-deep .owl-theme .owl-dots .owl-dot span {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 1);
+  border: none;
+  cursor: pointer;
+}
+
+:host ::ng-deep .owl-theme .owl-dots .owl-dot.active span {
+  width: 36px;
+  height: 16px;
+  border-radius: 10px;
+}
