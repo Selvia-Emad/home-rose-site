@@ -1,208 +1,131 @@
-<header class="main-header">
-  <div class="logo">
-    <a href="#">
-      <img src="\assets\images\logo.png" alt="Roka Logo">
-    </a>
-  </div>
-
-  <nav class="main-nav">
-    <ul>
-      <li><a href="#">Home</a></li>
-      <li><a href="#" class="active">All Category</a></li>
-      <li><a href="#">About</a></li>
-      <li><a href="#">Contact</a></li>
-    </ul>
-  </nav>
-
-  <div class="user-actions desktop-view">
-    <a href="#">
-      <svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <g clip-path="url(#clip0_32_277)">
-          <path d="M14 8C14 6.88021 14.5469 5.96354 14 5C13.4271 4.03646 11.9635 3.57292 11 3C10.0104 2.45312 9.09375 2 8 2C6.90625 2 5.98958 2.45312 5 3C4.03646 3.57292 3.57292 4.03646 3 5C2.45312 5.96354 2 6.88021 2 8C2 9.11979 2.45312 10.0365 3 11C3.57292 11.9635 4.03646 13.4271 5 14C5.98958 14.5469 6.90625 14 8 14C9.09375 14 10.0104 14.5469 11 14C11.9635 13.4271 13.4271 11.9635 14 11C14.5469 10.0365 14 9.11979 14 8ZM13 14C11.5938 15.1458 9.95312 15.974 8 16C5.70833 15.9479 3.53646 15.5365 2 14C0.463542 12.4635 0.0520833 10.2917 0 8C0.0520833 5.70833 0.463542 3.53646 2 2C3.53646 0.463541 5.70833 0.052084 8 0C10.2917 0.052084 12.4635 0.463541 14 2C15.5365 3.53646 15.9479 5.70833 16 8C15.974 9.95312 15.1458 11.5938 14 13L20 18C20.3646 18.4427 20.3646 19.5573 20 20C19.5573 20.3646 18.4427 20.3646 18 20L13 14Z" fill="#F82BA9" />
-        </g>
-        <defs>
-          <clipPath id="clip0_32_277">
-            <rect width="20" height="21" fill="white" transform="matrix(1 0 0 -1 0 21)" />
-          </clipPath>
-        </defs>
-      </svg>
+<nav class="navbar navbar-expand-lg navbar-light bg-light custom-navbar">
+  <div class="container-fluid custom-container">
+    <a class="navbar-brand" href="#">
+      <img src="assets/images/logo.png" alt="Roka Logo" class="logo">
     </a>
 
-    <a href="#">
-      <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <g clip-path="url(#clip0_2_816)">
-          <path d="M9.5 19V18L2.5 12C1.27604 10.8335 0.526042 9.68488 0.5 8C0.526042 6.60025 0.640625 5.03685 1.5 4C2.33333 2.98907 4.11979 2.28513 5.5 2C7.11458 1.71486 8.19792 2.09276 9.5 3C9.86458 3.23329 10.2135 3.66302 10.5 4C10.6562 3.81855 11.2917 3.15553 11.5 3C11.3438 3.10368 11.6302 2.87039 11.5 3C12.8021 2.09276 13.8854 1.74079 15.5 2C16.8802 2.28513 18.6667 2.96315 19.5 4C20.3594 5.03685 20.474 6.60025 20.5 8C20.474 9.68488 19.724 10.8335 18.5 12L11.5 18V19C11.1615 19.3111 10.9427 19 10.5 19C10.0573 19 9.83854 19.3111 9.5 19ZM9.5 6C9.5 6 9.52604 6.02592 9.5 6V5C9.03125 4.48157 8.125 4.20737 7.5 4C6.875 3.79263 6.17708 3.87039 5.5 4C4.58854 4.18145 4.07292 4.30013 3.5 5C2.92708 5.67395 2.52604 7.04091 2.5 8C2.52604 9.14053 2.66667 10.1964 3.5 11L10.5 17L17.5 11C18.3333 10.1964 18.474 9.14053 18.5 8C18.474 7.04091 18.0729 5.67395 17.5 5C16.9271 4.30013 16.4115 4.18145 15.5 4C14.8229 3.87039 14.125 3.79263 13.5 4C12.875 4.20737 11.9688 4.48157 11.5 5V6C11.5 6 11.526 5.97408 11.5 6C11.3177 6.18145 10.7604 6 10.5 6C10.2396 6 9.68229 6.18145 9.5 6Z" fill="#F82BA9" />
-        </g>
-        <defs>
-          <clipPath id="clip0_2_816">
-            <rect width="20" height="21" fill="white" transform="matrix(1 0 0 -1 0.5 21)" />
-          </clipPath>
-        </defs>
-      </svg>
-      <span class="badge">2</span>
-    </a>
 
-    <a href="#">
-      <svg width="19" height="21" viewBox="0 0 19 21" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <g clip-path="url(#clip0_2_824)">
-          <path d="M6.75 4V6H12.75V4C12.7232 3.29688 12.2321 3.46875 11.75 3C11.2679 2.53125 10.4732 2.02604 9.75 2C9.02679 2.02604 8.23214 2.53125 7.75 3C7.26786 3.46875 6.77679 3.29688 6.75 4ZM5.75 8H2.75V16C2.77679 16.5208 2.40179 17.6354 2.75 18C3.125 18.3385 4.21429 17.974 4.75 18H14.75C15.2857 17.974 16.375 18.3385 16.75 18C17.0982 17.6354 16.7232 16.5208 16.75 16V8H14.75V10C14.6964 10.5729 14.3393 10.9479 13.75 11C13.1607 10.9479 12.8036 10.5729 12.75 10V8H6.75V10C6.69643 10.5729 6.33929 10.9479 5.75 11C5.16071 10.9479 5.80357 10.5729 5.75 10V8ZM5.75 6V4C5.77679 2.75 5.89286 1.80729 6.75 1C7.58036 0.166666 8.46429 0.026041 9.75 0C11.0357 0.026041 11.9196 0.166666 12.75 1C13.6071 1.80729 14.7232 2.75 14.75 4V6H16.75C17.2857 6.02604 17.375 6.66146 17.75 7C18.0982 7.36458 18.7232 7.47917 18.75 8V16C18.7232 17.0677 18.4732 18.2969 17.75 19C17.0268 19.7031 15.8482 19.974 14.75 20H4.75C3.65179 19.974 2.47321 19.7031 1.75 19C1.02679 18.2969 0.776786 17.0677 0.75 16V8C0.776786 7.47917 1.40179 7.36458 1.75 7C2.125 6.66146 2.21429 6.02604 2.75 6H5.75Z" fill="#F82BA9" />
-        </g>
-        <defs>
-          <clipPath id="clip0_2_824">
-            <rect width="18" height="21" fill="white" transform="matrix(1 0 0 -1 0.75 21)" />
-          </clipPath>
-        </defs>
-      </svg>
-      <span class="badge">5</span>
-    </a>
-
-    <a href="#">
-      <svg width="19" height="21" viewBox="0 0 19 21" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <g clip-path="url(#clip0_1945_867)">
-          <path d="M17.5 19V17C17.5 15.9391 17.0786 14.9217 16.3284 14.1716C15.5783 13.4214 14.5609 13 13.5 13H5.5C4.43913 13 3.42172 13.4214 2.67157 14.1716C1.92143 14.9217 1.5 15.9391 1.5 17V19" stroke="#F82BA9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-          <path d="M9.5 9C11.7091 9 13.5 7.20914 13.5 5C13.5 2.79086 11.7091 1 9.5 1C7.29086 1 5.5 2.79086 5.5 5C5.5 7.20914 7.29086 9 9.5 9Z" stroke="#F82BA9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-        </g>
-        <defs>
-          <clipPath id="clip0_1945_867">
-            <rect width="18" height="21" fill="white" transform="matrix(1 0 0 -1 0.25 21)" />
-          </clipPath>
-        </defs>
-      </svg>
-    </a>
-  </div>
-
-  <div class="mobile-actions">
-    <a href="#">
-      <svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <g clip-path="url(#clip0_32_277)">
-          <path d="M14 8C14 6.88021 14.5469 5.96354 14 5C13.4271 4.03646 11.9635 3.57292 11 3C10.0104 2.45312 9.09375 2 8 2C6.90625 2 5.98958 2.45312 5 3C4.03646 3.57292 3.57292 4.03646 3 5C2.45312 5.96354 2 6.88021 2 8C2 9.11979 2.45312 10.0365 3 11C3.57292 11.9635 4.03646 13.4271 5 14C5.98958 14.5469 6.90625 14 8 14C9.09375 14 10.0104 14.5469 11 14C11.9635 13.4271 13.4271 11.9635 14 11C14.5469 10.0365 14 9.11979 14 8ZM13 14C11.5938 15.1458 9.95312 15.974 8 16C5.70833 15.9479 3.53646 15.5365 2 14C0.463542 12.4635 0.0520833 10.2917 0 8C0.0520833 5.70833 0.463542 3.53646 2 2C3.53646 0.463541 5.70833 0.052084 8 0C10.2917 0.052084 12.4635 0.463541 14 2C15.5365 3.53646 15.9479 5.70833 16 8C15.974 9.95312 15.1458 11.5938 14 13L20 18C20.3646 18.4427 20.3646 19.5573 20 20C19.5573 20.3646 18.4427 20.3646 18 20L13 14Z" fill="#F82BA9" />
-        </g>
-        <defs>
-          <clipPath id="clip0_32_277">
-            <rect width="20" height="21" fill="white" transform="matrix(1 0 0 -1 0 21)" />
-          </clipPath>
-        </defs>
-      </svg>
-    </a>
-
-    <a href="#">
-      <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <g clip-path="url(#clip0_2_816)">
-          <path d="M9.5 19V18L2.5 12C1.27604 10.8335 0.526042 9.68488 0.5 8C0.526042 6.60025 0.640625 5.03685 1.5 4C2.33333 2.98907 4.11979 2.28513 5.5 2C7.11458 1.71486 8.19792 2.09276 9.5 3C9.86458 3.23329 10.2135 3.66302 10.5 4C10.6562 3.81855 11.2917 3.15553 11.5 3C11.3438 3.10368 11.6302 2.87039 11.5 3C12.8021 2.09276 13.8854 1.74079 15.5 2C16.8802 2.28513 18.6667 2.96315 19.5 4C20.3594 5.03685 20.474 6.60025 20.5 8C20.474 9.68488 19.724 10.8335 18.5 12L11.5 18V19C11.1615 19.3111 10.9427 19 10.5 19C10.0573 19 9.83854 19.3111 9.5 19ZM9.5 6C9.5 6 9.52604 6.02592 9.5 6V5C9.03125 4.48157 8.125 4.20737 7.5 4C6.875 3.79263 6.17708 3.87039 5.5 4C4.58854 4.18145 4.07292 4.30013 3.5 5C2.92708 5.67395 2.52604 7.04091 2.5 8C2.52604 9.14053 2.66667 10.1964 3.5 11L10.5 17L17.5 11C18.3333 10.1964 18.474 9.14053 18.5 8C18.474 7.04091 18.0729 5.67395 17.5 5C16.9271 4.30013 16.4115 4.18145 15.5 4C14.8229 3.87039 14.125 3.79263 13.5 4C12.875 4.20737 11.9688 4.48157 11.5 5V6C11.5 6 11.526 5.97408 11.5 6C11.3177 6.18145 10.7604 6 10.5 6C10.2396 6 9.68229 6.18145 9.5 6Z" fill="#F82BA9" />
-        </g>
-        <defs>
-          <clipPath id="clip0_2_816">
-            <rect width="20" height="21" fill="white" transform="matrix(1 0 0 -1 0.5 21)" />
-          </clipPath>
-        </defs>
-      </svg>
-      <span class="badge">2</span>
-    </a>
-
-    <a href="#">
-      <svg width="19" height="21" viewBox="0 0 19 21" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <g clip-path="url(#clip0_2_824)">
-          <path d="M6.75 4V6H12.75V4C12.7232 3.29688 12.2321 3.46875 11.75 3C11.2679 2.53125 10.4732 2.02604 9.75 2C9.02679 2.02604 8.23214 2.53125 7.75 3C7.26786 3.46875 6.77679 3.29688 6.75 4ZM5.75 8H2.75V16C2.77679 16.5208 2.40179 17.6354 2.75 18C3.125 18.3385 4.21429 17.974 4.75 18H14.75C15.2857 17.974 16.375 18.3385 16.75 18C17.0982 17.6354 16.7232 16.5208 16.75 16V8H14.75V10C14.6964 10.5729 14.3393 10.9479 13.75 11C13.1607 10.9479 12.8036 10.5729 12.75 10V8H6.75V10C6.69643 10.5729 6.33929 10.9479 5.75 11C5.16071 10.9479 5.80357 10.5729 5.75 10V8ZM5.75 6V4C5.77679 2.75 5.89286 1.80729 6.75 1C7.58036 0.166666 8.46429 0.026041 9.75 0C11.0357 0.026041 11.9196 0.166666 12.75 1C13.6071 1.80729 14.7232 2.75 14.75 4V6H16.75C17.2857 6.02604 17.375 6.66146 17.75 7C18.0982 7.36458 18.7232 7.47917 18.75 8V16C18.7232 17.0677 18.4732 18.2969 17.75 19C17.0268 19.7031 15.8482 19.974 14.75 20H4.75C3.65179 19.974 2.47321 19.7031 1.75 19C1.02679 18.2969 0.776786 17.0677 0.75 16V8C0.776786 7.47917 1.40179 7.36458 1.75 7C2.125 6.66146 2.21429 6.02604 2.75 6H5.75Z" fill="#F82BA9" />
-        </g>
-        <defs>
-          <clipPath id="clip0_2_824">
-            <rect width="18" height="21" fill="white" transform="matrix(1 0 0 -1 0.75 21)" />
-          </clipPath>
-        </defs>
-      </svg>
-      <span class="badge">5</span>
-    </a>
-
-    <div class="hamburger-icon" onclick="toggleMenu()">
-      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M4 6H20M4 12H20M4 18H20" stroke="#160E4B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-      </svg>
-    </div>
-  </div>
-</header>
-
-<div class="mobile-menu" id="mobile-menu">
-  <nav class="mobile-nav">
-    <div class="close-btn" onclick="toggleMenu()">&times;</div>
-    <div class="mobile-logo">
-      <img src="\assets\images\logo.png" alt="Roka Logo">
-    </div>
-    <ul class="mobile-nav-list">
-      <li><a href="#">Home</a></li>
-      <li><a href="#">All Category</a></li>
-      <li><a href="#">About</a></li>
-      <li><a href="#">Contact</a></li>
-    </ul>
-    <ul class="mobile-actions-list">
-      <li><a href="#">My Account</a></li>
-      <li><a href="#">Wishlist</a></li>
-      <li><a href="#">Cart</a></li>
-    </ul>
-  </nav>
-</div>
-<!-- 
-<script>
-function toggleMenu() {
-  const mobileMenu = document.getElementById('mobile-menu');
-  mobileMenu.classList.toggle('active');
-}
-</script>  -->
-
-<!-- <p-toolbar styleClass="main-header-toolbar">
-  <div class="p-toolbar-group-start">
-    <div class="logo">
-      <a href="#">
-        <img src="\assets\images\logo.png" alt="Roka Logo" />
-      </a>
-    </div>
-  </div>
-
-  <div class="p-toolbar-group-center desktop-nav-container">
-    <nav class="main-nav">
-      <ul>
-        <li><a routerLink="/" routerLinkActive="active">Home</a></li>
-        <li><a routerLink="/all-category" routerLinkActive="active">All Category</a></li>
-        <li><a routerLink="/about" routerLinkActive="active">About</a></li>
-        <li><a routerLink="/contact" routerLinkActive="active">Contact</a></li>
-      </ul>
-    </nav>
-  </div>
-
-  <div class="p-toolbar-group-end">
-    <div class="user-actions desktop-view">
-      <a href="#"><i class="pi pi-search"></i></a>
-      <a href="#" class="p-overlay-badge">
-        <i class="pi pi-heart"></i>
-        <span class="p-badge p-badge-danger">2</span>
-      </a>
-      <a href="#" class="p-overlay-badge">
-        <i class="pi pi-shopping-bag"></i>
-        <span class="p-badge p-badge-danger">5</span>
-      </a>
-      <a href="#"><i class="pi pi-user"></i></a>
-    </div>
-
-    <button
-      pButton
-      type="button"
-      icon="pi pi-bars"
-      (click)="sidebarVisible = true"
-      class="p-button-rounded p-button-text p-button-secondary mobile-menu-button"
-    ></button>
-  </div>
-</p-toolbar>
-
-<p-sidebar [(visible)]="sidebarVisible" position="left" styleClass="mobile-sidebar">
-  <ng-template pTemplate="content">
-    <div class="mobile-menu-content">
-      <nav class="mobile-nav">
-        <ul>
-          <li><a (click)="sidebarVisible = false" routerLink="/">Home</a></li>
-          <li><a (click)="sidebarVisible = false" routerLink="/all-category">All Category</a></li>
-          <li><a (click)="sidebarVisible = false" routerLink="/about">About</a></li>
-          <li><a (click)="sidebarVisible = false" routerLink="/contact">Contact</a></li>
+      <div class="collapse navbar-collapse d-none d-lg-flex" id="navbarNav">
+        <ul class="navbar-nav mx-auto nav-links-custom">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">All Category</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Contact</a>
+          </li>
         </ul>
-      </nav>
+      </div>
+      <div class="d-flex">
+      <div class="user-actions d-flex align-items-center">
+        <a href="#" class="nav-icon">
+          <svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g clip-path="url(#clip0_292_1774)">
+              <path
+                d="M14 8C14 6.88021 14.5469 5.96354 14 5C13.4271 4.03646 11.9635 3.57292 11 3C10.0104 2.45312 9.09375 2 8 2C6.90625 2 5.98958 2.45312 5 3C4.03646 3.57292 3.57292 4.03646 3 5C2.45312 5.96354 2 6.88021 2 8C2 9.11979 2.45312 10.0365 3 11C3.57292 11.9635 4.03646 13.4271 5 14C5.98958 14.5469 6.90625 14 8 14C9.09375 14 10.0104 14.5469 11 14C11.9635 13.4271 13.4271 11.9635 14 11C14.5469 10.0365 14 9.11979 14 8ZM13 14C11.5938 15.1458 9.95312 15.974 8 16C5.70833 15.9479 3.53646 15.5365 2 14C0.463542 12.4635 0.0520833 10.2917 0 8C0.0520833 5.70833 0.463542 3.53646 2 2C3.53646 0.463541 5.70833 0.052084 8 0C10.2917 0.052084 12.4635 0.463541 14 2C15.5365 3.53646 15.9479 5.70833 16 8C15.974 9.95312 15.1458 11.5938 14 13L20 18C20.3646 18.4427 20.3646 19.5573 20 20C19.5573 20.3646 18.4427 20.3646 18 20L13 14Z"
+                fill="#F82BA9" />
+            </g>
+            <defs>
+              <clipPath id="clip0_292_1774">
+                <rect width="20" height="21" fill="white" transform="matrix(1 0 0 -1 0 21)" />
+              </clipPath>
+            </defs>
+          </svg>
+        </a>
+        <a href="#" class="nav-icon position-relative">
+          <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g clip-path="url(#clip0_2_816)">
+              <path
+                d="M9.5 19V18L2.5 12C1.27604 10.8335 0.526042 9.68488 0.5 8C0.526042 6.60025 0.640625 5.03685 1.5 4C2.33333 2.98907 4.11979 2.28513 5.5 2C7.11458 1.71486 8.19792 2.09276 9.5 3C9.86458 3.23329 10.2135 3.66302 10.5 4C10.6562 3.81855 11.2917 3.15553 11.5 3C11.3438 3.10368 11.6302 2.87039 11.5 3C12.8021 2.09276 13.8854 1.74079 15.5 2C16.8802 2.28513 18.6667 2.96315 19.5 4C20.3594 5.03685 20.474 6.60025 20.5 8C20.474 9.68488 19.724 10.8335 18.5 12L11.5 18V19C11.1615 19.3111 10.9427 19 10.5 19C10.0573 19 9.83854 19.3111 9.5 19ZM9.5 6C9.5 6 9.52604 6.02592 9.5 6V5C9.03125 4.48157 8.125 4.20737 7.5 4C6.875 3.79263 6.17708 3.87039 5.5 4C4.58854 4.18145 4.07292 4.30013 3.5 5C2.92708 5.67395 2.52604 7.04091 2.5 8C2.52604 9.14053 2.66667 10.1964 3.5 11L10.5 17L17.5 11C18.3333 10.1964 18.474 9.14053 18.5 8C18.474 7.04091 18.0729 5.67395 17.5 5C16.9271 4.30013 16.4115 4.18145 15.5 4C14.8229 3.87039 14.125 3.79263 13.5 4C12.875 4.20737 11.9688 4.48157 11.5 5V6C11.5 6 11.526 5.97408 11.5 6C11.3177 6.18145 10.7604 6 10.5 6C10.2396 6 9.68229 6.18145 9.5 6Z"
+                fill="#F82BA9" />
+            </g>
+            <defs>
+              <clipPath id="clip0_2_816">
+                <rect width="20" height="21" fill="white" transform="matrix(1 0 0 -1 0.5 21)" />
+              </clipPath>
+            </defs>
+          </svg>
+          <span class="badge rounded-pill ">2</span>
+        </a>
+        <a href="#" class="nav-icon position-relative">
+          <svg width="19" height="21" viewBox="0 0 19 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g clip-path="url(#clip0_2_824)">
+              <path
+                d="M6.75 4V6H12.75V4C12.7232 3.29688 12.2321 3.46875 11.75 3C11.2679 2.53125 10.4732 2.02604 9.75 2C9.02679 2.02604 8.23214 2.53125 7.75 3C7.26786 3.46875 6.77679 3.29688 6.75 4ZM5.75 8H2.75V16C2.77679 16.5208 2.40179 17.6354 2.75 18C3.125 18.3385 4.21429 17.974 4.75 18H14.75C15.2857 17.974 16.375 18.3385 16.75 18C17.0982 17.6354 16.7232 16.5208 16.75 16V8H14.75V10C14.6964 10.5729 14.3393 10.9479 13.75 11C13.1607 10.9479 12.8036 10.5729 12.75 10V8H6.75V10C6.69643 10.5729 6.33929 10.9479 5.75 11C5.16071 10.9479 5.80357 10.5729 5.75 10V8ZM5.75 6V4C5.77679 2.75 5.89286 1.80729 6.75 1C7.58036 0.166666 8.46429 0.026041 9.75 0C11.0357 0.026041 11.9196 0.166666 12.75 1C13.6071 1.80729 14.7232 2.75 14.75 4V6H16.75C17.2857 6.02604 17.375 6.66146 17.75 7C18.0982 7.36458 18.7232 7.47917 18.75 8V16C18.7232 17.0677 18.4732 18.2969 17.75 19C17.0268 19.7031 15.8482 19.974 14.75 20H4.75C3.65179 19.974 2.47321 19.7031 1.75 19C1.02679 18.2969 0.776786 17.0677 0.75 16V8C0.776786 7.47917 1.40179 7.36458 1.75 7C2.125 6.66146 2.21429 6.02604 2.75 6H5.75Z"
+                fill="#F82BA9" />
+            </g>
+            <defs>
+              <clipPath id="clip0_2_824">
+                <rect width="18" height="21" fill="white" transform="matrix(1 0 0 -1 0.75 21)" />
+              </clipPath>
+            </defs>
+          </svg>
+          <span class="badge rounded-pill ">5</span>
+        </a>
+        <a href="#" class="nav-icon">
+          <svg width="19" height="21" viewBox="0 0 19 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g clip-path="url(#clip0_1945_867)">
+              <path
+                d="M17.5 19V17C17.5 15.9391 17.0786 14.9217 16.3284 14.1716C15.5783 13.4214 14.5609 13 13.5 13H5.5C4.43913 13 3.42172 13.4214 2.67157 14.1716C1.92143 14.9217 1.5 15.9391 1.5 17V19"
+                stroke="#F82BA9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+              <path
+                d="M9.5 9C11.7091 9 13.5 7.20914 13.5 5C13.5 2.79086 11.7091 1 9.5 1C7.29086 1 5.5 2.79086 5.5 5C5.5 7.20914 7.29086 9 9.5 9Z"
+                stroke="#F82BA9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+            </g>
+            <defs>
+              <clipPath id="clip0_1945_867">
+                <rect width="18" height="21" fill="white" transform="matrix(1 0 0 -1 0.25 21)" />
+              </clipPath>
+            </defs>
+          </svg>
+        </a>
+      </div>
+
+      <button class="navbar-toggler border-0 d-lg-none" type="button" (click)="toggleSidebar()">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M21 10H7" stroke="#F82BA9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+          <path d="M21 6H3" stroke="#F82BA9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+          <path d="M21 14H3" stroke="#F82BA9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+          <path d="M21 18H7" stroke="#F82BA9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+      </button>
     </div>
-  </ng-template>
-</p-sidebar> -->
+  </div>
+</nav>
+
+<div class="mobile-sidebar" [ngClass]="{'show-sidebar': sidebarVisible}">
+  <div class="sidebar-header">
+    <a href="#">
+      <img src="assets/images/logo.png" alt="Roka Logo" class="logo">
+    </a>
+    <button class="close-btn" (click)="toggleSidebar()">
+      <svg width="35" height="36" viewBox="0 0 35 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect x="0.5" y="1" width="34" height="34" rx="17" stroke="black" stroke-opacity="0.08" />
+        <path
+          d="M22.8789 14.8164C23.207 14.418 23.207 14.0195 22.8789 13.6211C22.4805 13.293 22.082 13.293 21.6836 13.6211L17.5 17.8047L13.3164 13.6211C12.918 13.293 12.5195 13.293 12.1211 13.6211C11.793 14.0195 11.793 14.418 12.1211 14.8164L16.3047 19L12.1211 23.1836C11.793 23.582 11.793 23.9805 12.1211 24.3789C12.5195 24.707 12.918 24.707 13.3164 24.3789L17.5 20.1953L21.6836 24.3789C22.082 24.707 22.4805 24.707 22.8789 24.3789C23.207 23.9805 23.207 23.582 22.8789 23.1836L18.6953 19L22.8789 14.8164Z"
+          fill="#160E4B" />
+      </svg>
+    </button>
+  </div>
+  <div class="sidebar-body">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" href="#">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">All Category</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">About</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Contact</a>
+      </li>
+    </ul>
+  </div>
+</div>

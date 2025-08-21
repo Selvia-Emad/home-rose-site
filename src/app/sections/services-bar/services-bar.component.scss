@@ -1,14 +1,11 @@
-    :root {
-      --primary-pink: #F82BA9;
-      --light-pink-bg: #fce7f2;
-      --dark-text: #333;
-    }
+
 
     body {
       font-family: 'Inter', sans-serif;
       direction: rtl; /* اتجاه الكتابة من اليمين لليسار */
       background-color: #fff;
       padding: 20px;
+
     }
 
     .top-categories-bar {
@@ -20,7 +17,6 @@
       background-color: #FEEDF7; /* لون الخلفية الوردي الفاتح */
       border-radius: 20px;
       justify-content: space-between;
-      max-width: 1280px;
       margin-left: auto;
       margin-right: auto;
     }

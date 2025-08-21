@@ -191,18 +191,19 @@
 
   .main-image-container1 {
     display: block; /* الإطار الوردي يظهر على الهاتف */
-    width: 260px; /* تعديل العرض ليناسب الهاتف */
+    width: 280px; /* تعديل عرض الصورة الكبيرة */
     height: 360px; /* تعديل الارتفاع ليناسب الهاتف */
-    left: 20px; /* تعديل الموضع */
-    top: -10px; /* تعديل الموضع */
+    left: 90px; /* تعديل الموضع */
+    // top: -10px; /* تعديل الموضع */
     transform: rotate(6deg);
+    right: 0;
   }
 
   .main-image-container {
     width: 280px; /* تعديل عرض الصورة الكبيرة */
     height: 320px; /* تعديل ارتفاع الصورة الكبيرة */
-    left: 0px;
-    top: 0px;
+    left: -90px;
+    top: 20px;
   }
 
   .main-image {
