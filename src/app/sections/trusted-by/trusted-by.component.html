@@ -1,4 +1,4 @@
-<section class="trusted-by-section">
+<!-- <section class="trusted-by-section">
   <div class="trusted-by-container">
     <h2 class="section-title">Trusted By Over <span class="highlight">4.5k+</span> Companies</h2>
     <div class="logo-grid">
@@ -8,6 +8,21 @@
       <img src="../../../assets/images/logo-4.png" alt="Company Logo 4">
       <img src="../../../assets/images/logo-5.png" alt="Company Logo 5">
       <img src="../../../assets/images/logo-6.png" alt="Company Logo 6">
+    </div>
+  </div>
+</section> -->
+
+<section class="trusted-by-section">
+  <div class="trusted-by-container">
+    <h2 class="section-title">Trusted By Over <span class="highlight">4.5k+</span> Companies</h2>
+    <div class="logo-grid">
+      <owl-carousel-o [options]="customOptions">
+        <ng-template carouselSlide *ngFor="let logo of logos">
+          <div class="logo-item">
+            <img [src]="logo.src" [alt]="logo.alt" class="w-100">
+          </div>
+        </ng-template>
+      </owl-carousel-o>
     </div>
   </div>
 </section>

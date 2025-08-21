@@ -26,7 +26,7 @@ export class TrustedByComponent {
     loop: true,
     mouseDrag: true,
     touchDrag: true,
-    pullDrag: false,
+    pullDrag: true,
     dots: false,
     navSpeed: 700,
     navText: ['', ''],
@@ -41,15 +41,15 @@ export class TrustedByComponent {
         items: 6
       }
     },
-    nav: false // لا يوجد أسهم في هذا التصميم
+    nav: false
   };
 
   logos = [
-    { src: '../../../assets/images/logo-1.png', alt: 'Company Logo 1' },
-    { src: '../../../assets/images/logo-2.png', alt: 'Company Logo 2' },
-    { src: '../../../assets/images/logo-3.png', alt: 'Company Logo 3' },
-    { src: '../../../assets/images/logo-4.png', alt: 'Company Logo 4' },
-    { src: '../../../assets/images/logo-5.png', alt: 'Company Logo 5' },
-    { src: '../../../assets/images/logo-6.png', alt: 'Company Logo 6' }
+    { src: 'assets/images/logo-1.png', alt: 'Company Logo 1' },
+    { src: 'assets/images/logo-2.png', alt: 'Company Logo 2' },
+    { src: 'assets/images/logo-3.png', alt: 'Company Logo 3' },
+    { src: 'assets/images/logo-4.png', alt: 'Company Logo 4' },
+    { src: 'assets/images/logo-5.png', alt: 'Company Logo 5' },
+    { src: 'assets/images/logo-6.png', alt: 'Company Logo 6' }
   ];
 }
