@@ -1,0 +1,17 @@
+<div class="popup-backdrop" *ngIf="isOpen" (click)="onBackdropClick()">
+  <div
+    class="popup-card"
+    role="dialog"
+    aria-modal="true"
+    [style.width]="width"
+    (click)="stop($event)"
+  >
+    <button class="popup-close" aria-label="Close" (click)="close()">×</button>
+
+    <h2 class="popup-title" *ngIf="title">{{ title }}</h2>
+
+    <div class="popup-content">
+      <ng-content></ng-content>
+    </div>
+  </div>
+</div>

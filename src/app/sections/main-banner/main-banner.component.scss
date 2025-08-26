@@ -173,6 +173,11 @@
   display: flex;
   gap: 15px;
   padding-block: 20px;
+  @media (max-width: 768px) {
+  flex-direction: column;
+
+  }
+
 }
 
 /*

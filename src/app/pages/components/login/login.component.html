@@ -1,1 +1,57 @@
-<p>login works!</p>
+<button class="open-login-btn" (click)="open()">Login</button>
+
+<app-popup
+  [isOpen]="isOpen"
+  [title]="'Login To Your Account'"
+  [width]="'520px'"
+  (closed)="close()"
+>
+  <form [formGroup]="loginForm" (ngSubmit)="onSubmit()" class="login-form">
+
+    <!-- Email -->
+    <input
+      type="email"
+      formControlName="email"
+      placeholder="Email"
+    />
+    <div class="error" *ngIf="emailCtrl?.invalid && emailCtrl?.touched">
+      <span *ngIf="emailCtrl?.errors?.['required']">Email is required.</span>
+      <span *ngIf="emailCtrl?.errors?.['email']">Enter a valid email address.</span>
+    </div>
+
+    <!-- Password -->
+    <input
+      type="password"
+      formControlName="password"
+      placeholder="Password"
+    />
+    <div class="error" *ngIf="passwordCtrl?.invalid && passwordCtrl?.touched">
+      <span *ngIf="passwordCtrl?.errors?.['required']">Password is required.</span>
+      <span *ngIf="passwordCtrl?.errors?.['minlength']">Password must be at least 6 characters.</span>
+    </div>
+
+    <div class="login-row">
+      <label class="remember">
+        <input type="checkbox" formControlName="remember" />
+        <span>Remind me</span>
+      </label>
+
+      <a class="link" (click)="goTo('forgot')">Forgot Password</a>
+    </div>
+
+    <p class="signup">
+      No account?
+      <a class="link" (click)="goTo('signup')">Create one here</a>
+    </p>
+
+    <button type="submit" class="login-btn"  [disabled]="loginForm.invalid">Login</button>
+
+    <!-- Error Message from Backend -->
+    <div *ngIf="errorMessage" class="server-error">
+      {{ errorMessage }}
+
+    </div>
+     <!-- <button (click)="goTo('verify')">Send Code</button>
+      <a (click)="goTo('login')">Back to login</a> -->
+  </form>
+</app-popup>

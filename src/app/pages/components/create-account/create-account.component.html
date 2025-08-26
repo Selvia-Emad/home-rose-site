@@ -1,0 +1,43 @@
+<!-- <button class="open-createAccount-btn" (click)="open()">Create account</button> -->
+
+<app-popup [title]="'Create Account'" [isOpen]="isOpen" [width]="'520px'" (closed)="close()">
+  <form [formGroup]="accountForm" (ngSubmit)="submit()" class="form-container" novalidate>
+
+    <input type="text" placeholder="First Name" formControlName="firstName" />
+    <div class="error" *ngIf="accountForm.get('firstName')?.invalid && accountForm.get('firstName')?.touched">
+      <span *ngIf="accountForm.get('firstName')?.errors?.['required']">First Name is required.</span>
+      <span *ngIf="accountForm.get('firstName')?.errors?.['minlength']">First Name must be at least 2 characters.</span>
+    </div>
+
+    <input type="text" placeholder="Last Name" formControlName="lastName" />
+    <div class="error" *ngIf="accountForm.get('lastName')?.invalid && accountForm.get('lastName')?.touched">
+      <span *ngIf="accountForm.get('lastName')?.errors?.['required']">Last Name is required.</span>
+      <span *ngIf="accountForm.get('lastName')?.errors?.['minlength']">Last Name must be at least 2 characters.</span>
+    </div>
+
+    <input type="tel" placeholder="Phone" formControlName="phone" />
+    <div class="error" *ngIf="accountForm.get('phone')?.invalid && accountForm.get('phone')?.touched">
+      <span *ngIf="accountForm.get('phone')?.errors?.['required']">Phone number is required.</span>
+      <span *ngIf="accountForm.get('phone')?.errors?.['pattern']">Phone must be 11 digits.</span>
+    </div>
+
+    <input type="email" placeholder="Email" formControlName="email" />
+    <div class="error" *ngIf="accountForm.get('email')?.invalid && accountForm.get('email')?.touched">
+      <span *ngIf="accountForm.get('email')?.errors?.['required']">Email is required.</span>
+      <span *ngIf="accountForm.get('email')?.errors?.['email']">Enter a valid email.</span>
+    </div>
+
+    <input type="password" placeholder="Password" formControlName="password" />
+    <div class="error" *ngIf="accountForm.get('password')?.invalid && accountForm.get('password')?.touched">
+      <span *ngIf="accountForm.get('password')?.errors?.['required']">Password is required.</span>
+      <span *ngIf="accountForm.get('password')?.errors?.['minlength']">Password must be at least 6 characters.</span>
+    </div>
+
+    <input type="password" placeholder="Confirm Password" formControlName="rePassword" />
+    <div class="error" *ngIf="accountForm.hasError('notMatching') && accountForm.get('rePassword')?.touched">
+      Passwords do not match.
+    </div>
+
+    <button type="submit" class="submit-btn">Create Account</button>
+  </form>
+</app-popup>

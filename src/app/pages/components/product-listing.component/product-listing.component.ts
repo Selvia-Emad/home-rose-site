@@ -59,8 +59,7 @@ import { CarouselModule, OwlOptions } from 'ngx-owl-carousel-o';
   selector: 'app-product-listing',
   standalone: true,
   // تأكد من إضافة CarouselModule في الـ imports
-  imports: [CarouselModule ,CommonModule,
-    ProductListingComponent],
+  imports: [CarouselModule ,CommonModule],
   templateUrl: './product-listing.component.html',
   styleUrl: './product-listing.component.scss'
 })
@@ -74,7 +73,7 @@ export class ProductListingComponent implements OnInit {
     dots: false,
     navSpeed: 700,
 
-    navText: ['<', '>'],
+    navText: ['', ''],
     responsive: {
       0: {
         items: 1

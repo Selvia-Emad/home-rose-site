@@ -179,3 +179,43 @@ padding-left: 20px;
   border: 1px solid #ddd;
   cursor: pointer;
 }
+// .owl-nav.ng-star-inserted {
+//   display: flex;
+//   justify-content: space-between;
+//   position: absolute;
+//   top: 31%;
+//   width: 100%; /* علشان يمتد بعرض الكاروسيل */
+//   left: 0;
+// }
+
+// [ng-star-inserted] .owl-theme .owl-nav {
+//     position: absolute;
+//     top: 50%;
+//     width: 100%;
+//     transform: translateY(-50%);
+//     display: flex
+// ;
+//     justify-content: space-between;
+//     padding: 0 50px;
+//     box-sizing: border-box;
+// }
+
+::ng-deep  .owl-nav.ng-star-inserted {
+  display: flex !important;
+  justify-content: space-between;
+  position: absolute;
+  top: 31%;
+  width: 100%;
+  left: 0;
+}
+
+:host ::ng-deep .owl-theme .owl-nav {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  transform: translateY(-50%);
+  display: flex;
+  justify-content: space-between;
+  padding: 0 50px;
+  box-sizing: border-box;
+}

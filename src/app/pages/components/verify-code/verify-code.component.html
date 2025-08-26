@@ -1,0 +1,30 @@
+<button class="open-verify-btn" (click)="open()">Verify Reset Code</button>
+
+<app-popup
+  [isOpen]="isOpen"
+  [title]="'Enter Verification Code'"
+  [width]="'520px'"
+  (closed)="close()"
+>
+  <form [formGroup]="verifyForm" (ngSubmit)="onVerify()" class="form-container">
+  <input
+    type="text"
+    formControlName="resetCode"
+    placeholder="Enter reset code"
+  />
+
+  <div class="error" *ngIf="resetCodeCtrl?.invalid && resetCodeCtrl?.touched">
+    <span *ngIf="resetCodeCtrl?.errors?.['required']">Reset code is required.</span>
+    <span *ngIf="resetCodeCtrl?.errors?.['minlength']">Code must be 6 digits.</span>
+    <span *ngIf="resetCodeCtrl?.errors?.['maxlength']">Code must be 6 digits.</span>
+  </div>
+
+  <button type="submit" class="verify-btn" [disabled]="verifyForm.invalid">
+    Verify Code
+  </button>
+
+  <div *ngIf="message" class="success-msg">{{ message }}</div>
+  <div *ngIf="errorMessage" class="error-msg">{{ errorMessage }}</div>
+</form>
+
+</app-popup>

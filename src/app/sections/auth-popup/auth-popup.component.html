@@ -1,0 +1,63 @@
+<!-- auth-popup.component.html -->
+<button (click)="open('login')" class="open-login-btn">Login</button>
+
+<app-popup [isOpen]="isOpen" [title]="'Authentication'" [width]="'520px'" (closed)="close()">
+
+  <!-- LOGIN -->
+  <form *ngIf="step === 'login'" [formGroup]="loginForm" (ngSubmit)="onLogin()" class="form-container">
+    <input type="email" formControlName="email" placeholder="Email" />
+    <input type="password" formControlName="password" placeholder="Password" />
+    <button type="submit" class="submit-btn">Login</button>
+    <p class="footer-text">
+      <a class="login-link" (click)="goTo('forgot')">Forgot Password?</a>
+    </p>
+    <p class="footer-text">
+      No account?
+      <a class="login-link" (click)="goTo('signup')">Create one</a>
+    </p>
+  </form>
+
+  <!-- SIGNUP -->
+  <form *ngIf="step === 'signup'" [formGroup]="signupForm" (ngSubmit)="onSignup()" class="form-container">
+    <input type="text" formControlName="firstName" placeholder="First Name" />
+    <input type="text" formControlName="lastName" placeholder="Last Name" />
+    <input type="tel" formControlName="phone" placeholder="Phone" />
+    <input type="email" formControlName="email" placeholder="Email" />
+    <input type="password" formControlName="password" placeholder="Password" />
+    <input type="password" formControlName="rePassword" placeholder="Confirm Password" />
+    <button type="submit" class="submit-btn">Create Account</button>
+    <p class="footer-text">
+      <a class="login-link" (click)="goTo('login')">Back to Login</a>
+    </p>
+  </form>
+
+  <!-- FORGOT -->
+  <form *ngIf="step === 'forgot'" [formGroup]="loginForm" (ngSubmit)="goTo('verify')" class="form-container">
+    <input type="email" formControlName="email" placeholder="Enter your email" />
+    <button type="submit" class="submit-btn">Send Code</button>
+    <p class="footer-text">
+      <a class="login-link" (click)="goTo('login')">Back to Login</a>
+    </p>
+  </form>
+
+  <!-- VERIFY -->
+  <form *ngIf="step === 'verify'" [formGroup]="verifyForm" (ngSubmit)="onVerify()" class="form-container">
+    <input type="text" formControlName="resetCode" placeholder="Enter reset code" />
+    <button type="submit" class="submit-btn">Verify</button>
+    <p class="footer-text">
+      <a class="login-link" (click)="goTo('forgot')">Back</a>
+    </p>
+  </form>
+
+  <!-- RESET -->
+  <form *ngIf="step === 'reset'" [formGroup]="resetForm" (ngSubmit)="onReset()" class="form-container">
+    <input type="email" formControlName="email" placeholder="Email" />
+    <input type="password" formControlName="newPassword" placeholder="New Password" />
+    <button type="submit" class="submit-btn">Reset Password</button>
+  </form>
+
+  <!-- Messages -->
+  <div *ngIf="message" class="success-msg">{{ message }}</div>
+  <div *ngIf="errorMessage" class="error-msg">{{ errorMessage }}</div>
+
+</app-popup>

@@ -1,0 +1,85 @@
+/* زر فتح البوب أب للتجربة فقط */
+.open-login-btn {
+  padding: 10px 16px;
+  border: none;
+  border-radius: 8px;
+  background: #f82ba9;
+  color: #fff;
+  cursor: pointer;
+}
+
+/* ستايل الفورم يطابق التصميم */
+.login-form {
+  width: 100%;
+  text-align: left;
+}
+
+.login-form input[type="email"],
+.login-form input[type="password"] {
+  width: 100%;
+  height: 44px;
+  border: 1px solid #eee;
+  background: #f9f9f9;
+  border-radius: 24px;
+  outline: none;
+  padding: 0 14px;
+  margin-bottom: 14px;
+  font-size: 14px;
+}
+
+.login-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 13px;
+  margin: 4px 0 10px;
+}
+
+.remember {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  user-select: none;
+}
+
+.link {
+  text-decoration: none;
+  color: #f82ba9;
+  font-weight: 500;
+}
+
+.signup {
+  text-align: center;
+  font-size: 13px;
+  margin: 8px 0 14px;
+}
+
+.login-btn {
+  width: 100%;
+  height: 44px;
+  border: none;
+  border-radius: 24px;
+  background: #f82ba9;
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform .04s ease, box-shadow .2s ease, background .2s ease;
+  box-shadow: 0 6px 16px rgba(248, 43, 169, 0.35);
+}
+
+.login-btn:active {
+  transform: translateY(1px);
+}
+
+.login-btn:disabled {
+  opacity: .6;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+.error {
+  color: red;
+  font-size: 13px;
+  margin-top: -10px;
+  margin-bottom: 10px;
+}

@@ -1,0 +1,71 @@
+
+.open-createAccount-btn{
+   width: 100%;
+  height: 44px;
+  border: none;
+  border-radius: 24px;
+  background: #f82ba9;
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform .04s ease, box-shadow .2s ease, background .2s ease;
+  box-shadow: 0 6px 16px rgba(248, 43, 169, 0.35);
+}
+.form-container {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin: 20px 0;
+}
+
+.form-container input {
+  padding: 10px;
+  border-radius: 24px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+}
+
+.submit-btn {
+  background: #f82ba9;
+  color: white;
+  border: none;
+  border-radius: 24px;
+  padding: 12px;
+  margin-top: 10px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.submit-btn:hover {
+  background: #d91f8a;
+}
+
+.footer-text {
+  text-align: center;
+  margin-top: 15px;
+  font-size: 14px;
+  color: white;
+}
+
+.login-link {
+  margin-left: 5px;
+  color: #f82ba9;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.login-link:hover {
+  text-decoration: underline;
+}
+
+.error {
+  color: #ff4d4d;
+  font-size: 13px;
+  margin-top: -8px;
+  margin-bottom: 8px;
+  /* Make sure the error message is visible */
+  display: block;
+}
